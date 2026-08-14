@@ -190,7 +190,15 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 
 	var fieldprop uint64
 	switch {
-	case info.XML.HasFieldProp:
+	// fieldprop="0" is a real, observed value on renewable nodes' post-harvest
+	// reset packets (a "cleared" sentinel, not an actual plot id - confirmed
+	// via a live capture: a Quartz harvest's second reset packet had
+	// fieldprop="0" while still carrying the real itemid). Treating it as a
+	// literal id created a phantom fieldprop-"0" plot and fired a spurious
+	// "plant" for it. Falling through to resolution by the packet's own Id
+	// instead correctly maps it back to the real plot, since Id stays
+	// constant and already has a idToField entry from the packet(s) before it.
+	case info.XML.HasFieldProp && info.XML.FieldProp != 0:
 		fieldprop = info.XML.FieldProp
 	default:
 		if fp, ok := f.resolveField(info.Id, info.XML.LinkProp); ok {

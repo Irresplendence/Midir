@@ -422,16 +422,17 @@ func TestFarmTrackerQuartzAndTreeHarvest(t *testing.T) {
 
 			events := feedFrame(t, ft, loadHexFile(t, tc.fixture))
 
-			var sequence []string
+			// Deliberately checking ALL events here, not just ones matching
+			// tc.fieldprop: a real bug (fieldprop="0" on a renewable node's
+			// post-harvest reset packet being treated as a literal plot id
+			// instead of a "cleared" sentinel) fired a spurious "plant" for a
+			// phantom fieldprop="0" plot, which a target-fieldprop-filtered
+			// check would silently miss entirely.
 			for _, e := range events {
-				if e.FieldProp == strconv.FormatUint(tc.fieldprop, 10) {
-					sequence = append(sequence, e.Event)
-					t.Logf("  %+v", *e)
-				}
+				t.Logf("  %+v", *e)
 			}
-
-			if len(sequence) != 1 || sequence[0] != "harvest" {
-				t.Fatalf("expected exactly one harvest event, got %v", sequence)
+			if len(events) != 1 || events[0].Event != "harvest" || events[0].FieldProp != strconv.FormatUint(tc.fieldprop, 10) {
+				t.Fatalf("expected exactly one harvest event for fieldprop %d and nothing else, got %d event(s): %+v", tc.fieldprop, len(events), events)
 			}
 		})
 	}
