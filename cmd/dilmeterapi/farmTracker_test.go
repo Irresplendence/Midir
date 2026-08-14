@@ -173,9 +173,14 @@ func feedFrame(t *testing.T, ft *FarmTracker, data []byte) []*farmPropData {
 			case opcodePropDisappear:
 				info, err := packet.ParsePropDisappearPacket(gp)
 				if err == nil {
-					if d := ft.HandlePropDisappear(info.Id, info.LinkId); d != nil {
+					if d := ft.HandlePropDisappear(info.Id, info.LinkId, info.At); d != nil {
 						results = append(results, d)
 					}
+				}
+			case opcodeFarmSystemMessage:
+				name, ok, err := packet.ParseFarmSystemMessage(gp)
+				if err == nil && ok {
+					ft.HandlePlantMessage(name, gp.At)
 				}
 			}
 		}
@@ -270,9 +275,11 @@ func TestFarmTrackerFullLifecycle(t *testing.T) {
 	events = append(events, feedFrame(t, ft, loadHexFile(t, "testdata/lifecycle_harvest.hex"))...)
 
 	var sequence []string
+	var matched []*farmPropData
 	for _, e := range events {
 		if e.FieldProp == targetField {
 			sequence = append(sequence, e.Event)
+			matched = append(matched, e)
 			t.Logf("  %+v", *e)
 		}
 	}
@@ -284,6 +291,19 @@ func TestFarmTrackerFullLifecycle(t *testing.T) {
 	for i, w := range want {
 		if sequence[i] != w {
 			t.Errorf("event %d: expected %q, got %q (full sequence: %v)", i, w, sequence[i], sequence)
+		}
+	}
+
+	// Name should be correlated from the plant-time "You used Blackberry
+	// Seeds (Taillteann Farm)!" system message, which rides in the same
+	// packet burst as the plant update, and should stick on every subsequent
+	// event for this plot (ready, harvest), not just the plant event itself.
+	for i, e := range matched {
+		if e.Name != "Blackberry Seeds" {
+			t.Errorf("event %d (%s): expected Name %q, got %q", i, e.Event, "Blackberry Seeds", e.Name)
+		}
+		if e.At <= 0 {
+			t.Errorf("event %d (%s): expected a positive unix timestamp, got %d", i, e.Event, e.At)
 		}
 	}
 }

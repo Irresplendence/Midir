@@ -87,6 +87,7 @@ const (
 	opcodePropAppear              = 0x52d0
 	opcodePropDisappear           = 0x52d1
 	opcodePropUpdate              = 0x52d2
+	opcodeFarmSystemMessage       = 0x526d
 )
 
 // This map contains skill IDs for delayed damage effects (like bleeds)
@@ -854,9 +855,19 @@ func (t *eventPublisher) handleFarmPropPacket(p *packet.GamePacket) {
 		if err != nil {
 			return
 		}
-		if data := t.farmTracker.HandlePropDisappear(info.Id, info.LinkId); data != nil {
+		if data := t.farmTracker.HandlePropDisappear(info.Id, info.LinkId, info.At); data != nil {
 			t.Broadcast("farm_prop", data)
 		}
+
+	case opcodeFarmSystemMessage:
+		// This opcode is shared by several unrelated message types (e.g. "Your
+		// tending succeeded!"); ok=false just means this particular message
+		// wasn't a plant confirmation, not an error.
+		name, ok, err := packet.ParseFarmSystemMessage(p)
+		if err != nil || !ok {
+			return
+		}
+		t.farmTracker.HandlePlantMessage(name, p.At)
 	}
 }
 

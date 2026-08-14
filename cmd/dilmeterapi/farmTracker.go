@@ -3,26 +3,30 @@ package main
 import (
 	"strconv"
 	"sync"
+	"time"
 
 	"github.com/Marcentus/Midir/packet"
 )
 
 // farmPropData is the payload of a "farm_prop" WebSocket message.
 type farmPropData struct {
-	Event        string `json:"event"` // "plant" | "tend" | "harvest"
+	Event        string `json:"event"` // "plant" | "tend" | "ready" | "harvest"
 	FieldProp    string `json:"fieldprop"`
 	Owner        string `json:"owner"`
 	ItemId       uint64 `json:"itemid"`
+	Name         string `json:"name,omitempty"` // item display name, e.g. "Blackberry Seeds"; empty if not yet correlated
 	Support      uint64 `json:"support"`
 	SupportIndex uint64 `json:"supportIndex"`
 	Fertility    bool   `json:"fertility"`
 	Special      bool   `json:"special"`
+	At           int64  `json:"at"` // unix seconds, packet arrival time
 }
 
 type plotState struct {
 	fieldprop      uint64
 	owner          uint64
 	itemid         uint64
+	name           string
 	support        uint64
 	supportIndex   uint64
 	fertility      bool
@@ -58,13 +62,37 @@ type FarmTracker struct {
 	// own id) to the resolved fieldprop it belongs to.
 	idToField map[uint64]uint64
 	plots     map[uint64]*plotState // fieldprop -> state
+
+	// pendingPlantName/pendingPlantAt cache the most recent "You used <item>
+	// (<farm>)!" system message (opcode 0x526d), applied to the next "plant"
+	// event if it fires within plantMessageCorrelationWindow. There's no shared
+	// ID linking that message to a specific fieldprop, so this is a simple
+	// single-slot cache rather than per-plot matching - safe in practice since
+	// one player only plants one thing at a time.
+	pendingPlantName string
+	pendingPlantAt   time.Time
 }
+
+// plantMessageCorrelationWindow bounds how long a cached plant-confirmation
+// message stays eligible to be attached to the next plant event. Crop
+// planting takes several packets (and observed up to a few seconds) to
+// resolve fieldprop+itemid, so this needs to be generous, not tight.
+const plantMessageCorrelationWindow = 15 * time.Second
 
 func NewFarmTracker() *FarmTracker {
 	return &FarmTracker{
 		idToField: make(map[uint64]uint64),
 		plots:     make(map[uint64]*plotState),
 	}
+}
+
+// HandlePlantMessage caches a plant-confirmation item name (already extracted
+// via packet.ParseFarmSystemMessage) to be attached to the next plant event.
+func (f *FarmTracker) HandlePlantMessage(itemName string, at time.Time) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	f.pendingPlantName = itemName
+	f.pendingPlantAt = at
 }
 
 func (f *FarmTracker) resolveField(candidates ...uint64) (uint64, bool) {
@@ -147,10 +175,12 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 			FieldProp:    strconv.FormatUint(fieldprop, 10),
 			Owner:        strconv.FormatUint(plot.owner, 10),
 			ItemId:       plot.itemid,
+			Name:         plot.name,
 			Support:      plot.support,
 			SupportIndex: plot.supportIndex,
 			Fertility:    plot.fertility,
 			Special:      plot.special,
+			At:           info.At.Unix(),
 		}
 	}
 
@@ -158,6 +188,13 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 	if !plot.plantEmitted {
 		if info.XML.HasItemId {
 			plot.plantEmitted = true
+			if f.pendingPlantName != "" && !info.At.IsZero() {
+				delta := info.At.Sub(f.pendingPlantAt)
+				if delta >= -2*time.Second && delta < plantMessageCorrelationWindow {
+					plot.name = f.pendingPlantName
+					f.pendingPlantName = ""
+				}
+			}
 			return snapshot("plant")
 		}
 		return nil
@@ -213,7 +250,7 @@ func (f *FarmTracker) resetPlotForNextCycle(plot *plotState) {
 // it's ignored in HandlePropAppear: it's a generic shared value, not a unique
 // per-instance identifier) back to a known fieldprop and, if found, emits
 // harvest and forgets the plot.
-func (f *FarmTracker) HandlePropDisappear(id, linkId uint64) *farmPropData {
+func (f *FarmTracker) HandlePropDisappear(id, linkId uint64, at time.Time) *farmPropData {
 	f.mu.Lock()
 	defer f.mu.Unlock()
 
@@ -231,10 +268,12 @@ func (f *FarmTracker) HandlePropDisappear(id, linkId uint64) *farmPropData {
 		FieldProp:    strconv.FormatUint(fieldprop, 10),
 		Owner:        strconv.FormatUint(plot.owner, 10),
 		ItemId:       plot.itemid,
+		Name:         plot.name,
 		Support:      plot.support,
 		SupportIndex: plot.supportIndex,
 		Fertility:    plot.fertility,
 		Special:      plot.special,
+		At:           at.Unix(),
 	}
 
 	delete(f.plots, fieldprop)

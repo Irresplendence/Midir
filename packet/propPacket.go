@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"regexp"
 	"strconv"
+	"time"
 )
 
 // PropUpdateInfo is the parsed form of a PropUpdate (0x52d2) packet.
@@ -12,6 +13,7 @@ type PropUpdateInfo struct {
 	Id  uint64 // GamePacket.Id (may be the field prop id itself, or a linked seed/crop prop id)
 	Tag string // "seed", "single", "grow", "collecting", etc.
 	XML PropXMLAttrs
+	At  time.Time // packet arrival time (GamePacket.At)
 }
 
 // PropAppearInfo is the parsed form of a PropAppears (0x52d0) packet.
@@ -97,6 +99,7 @@ func ParsePropUpdatePacket(p *GamePacket) (*PropUpdateInfo, error) {
 		Id:  p.Id,
 		Tag: msg[0].Data().(string),
 		XML: parsePropXML(msg[3].Data().(string)),
+		At:  p.At,
 	}, nil
 }
 
@@ -106,6 +109,7 @@ func ParsePropUpdatePacket(p *GamePacket) (*PropUpdateInfo, error) {
 type PropDisappearInfo struct {
 	Id     uint64 // GamePacket.Id
 	LinkId uint64 // Msg[0]
+	At     time.Time
 }
 
 // ParsePropDisappearPacket parses a PropDisappears (0x52d1) packet.
@@ -121,6 +125,7 @@ func ParsePropDisappearPacket(p *GamePacket) (*PropDisappearInfo, error) {
 	return &PropDisappearInfo{
 		Id:     p.Id,
 		LinkId: msg[0].Data().(uint64),
+		At:     p.At,
 	}, nil
 }
 
