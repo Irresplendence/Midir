@@ -20,6 +20,7 @@ type farmPropData struct {
 	Fertility    bool   `json:"fertility"`
 	Special      bool   `json:"special"`
 	At           int64  `json:"at"` // unix seconds, packet arrival time
+	Quality      string `json:"quality,omitempty"` // "Common" | "Fine" | "Finest" - only ever set on "harvest" events
 }
 
 type plotState struct {
@@ -71,6 +72,19 @@ type FarmTracker struct {
 	// one player only plants one thing at a time.
 	pendingPlantName string
 	pendingPlantAt   time.Time
+
+	// pendingHarvestQuality caches the most recent harvest-confirmation message
+	// (opcode 0x213a6, "<Quality> <item> ... placed in storage."), applied to
+	// the next harvest event the same way pendingPlantName is applied to the
+	// next plant event. This is the only place quality (Common/Fine/Finest)
+	// appears on the wire - there's no separate numeric score field.
+	pendingHarvestQuality string
+	pendingHarvestAt      time.Time
+
+	// pendingHarvestEmit holds a harvest event that's ready except for
+	// quality, for the renewable-node ordering (see HandleHarvestMessage)
+	// where the harvest trigger fires before the quality message does.
+	pendingHarvestEmit *farmPropData
 }
 
 // plantMessageCorrelationWindow bounds how long a cached plant-confirmation
@@ -78,6 +92,12 @@ type FarmTracker struct {
 // planting takes several packets (and observed up to a few seconds) to
 // resolve fieldprop+itemid, so this needs to be generous, not tight.
 const plantMessageCorrelationWindow = 15 * time.Second
+
+// harvestMessageCorrelationWindow bounds how long a cached harvest-storage
+// message stays eligible to be attached to the next harvest event. Observed
+// arriving in the same packet burst as the harvest signal itself, but kept
+// generous for the same reason as plantMessageCorrelationWindow.
+const harvestMessageCorrelationWindow = 15 * time.Second
 
 func NewFarmTracker() *FarmTracker {
 	return &FarmTracker{
@@ -93,6 +113,47 @@ func (f *FarmTracker) HandlePlantMessage(itemName string, at time.Time) {
 	defer f.mu.Unlock()
 	f.pendingPlantName = itemName
 	f.pendingPlantAt = at
+}
+
+// HandleHarvestMessage handles a harvest-confirmation quality (already
+// extracted via packet.ParseHarvestStorageMessage). Two different orderings
+// have been observed: crops fire this message *before* the harvest trigger
+// (PropDisappears), so there's nothing pending yet and it's just cached for
+// HandlePropDisappear to pick up. Renewable nodes fire "collecting" *before*
+// this message, so HandlePropUpdate will already have parked a
+// quality-less harvest event in pendingHarvestEmit - if so, this completes
+// and returns it for the caller to actually publish (the only case where
+// completing a harvest happens outside HandlePropUpdate/HandlePropDisappear).
+func (f *FarmTracker) HandleHarvestMessage(quality string, at time.Time) *farmPropData {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+
+	if f.pendingHarvestEmit != nil {
+		data := f.pendingHarvestEmit
+		f.pendingHarvestEmit = nil
+		data.Quality = quality
+		return data
+	}
+
+	f.pendingHarvestQuality = quality
+	f.pendingHarvestAt = at
+	return nil
+}
+
+// takeHarvestQuality returns the pending harvest quality if it's still within
+// the correlation window of `at`, consuming it (single-use) either way once
+// checked so a stale one can't leak into some unrelated future harvest.
+func (f *FarmTracker) takeHarvestQuality(at time.Time) string {
+	quality := f.pendingHarvestQuality
+	f.pendingHarvestQuality = ""
+	if quality == "" || at.IsZero() {
+		return ""
+	}
+	delta := at.Sub(f.pendingHarvestAt)
+	if delta < -2*time.Second || delta >= harvestMessageCorrelationWindow {
+		return ""
+	}
+	return quality
 }
 
 func (f *FarmTracker) resolveField(candidates ...uint64) (uint64, bool) {
@@ -218,7 +279,15 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 		plot.harvestEmitted = true
 		data := snapshot("harvest")
 		f.resetPlotForNextCycle(plot)
-		return data
+		if q := f.takeHarvestQuality(info.At); q != "" {
+			data.Quality = q
+			return data
+		}
+		// Quality message for renewable nodes typically arrives just after
+		// "collecting", not before - park this event and let
+		// HandleHarvestMessage complete + emit it when that message shows up.
+		f.pendingHarvestEmit = data
+		return nil
 	}
 
 	// tend: supportIndex genuinely reset to 0 (not just an ambient increment).
@@ -274,6 +343,7 @@ func (f *FarmTracker) HandlePropDisappear(id, linkId uint64, at time.Time) *farm
 		Fertility:    plot.fertility,
 		Special:      plot.special,
 		At:           at.Unix(),
+		Quality:      f.takeHarvestQuality(at),
 	}
 
 	delete(f.plots, fieldprop)

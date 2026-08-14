@@ -88,6 +88,7 @@ const (
 	opcodePropDisappear           = 0x52d1
 	opcodePropUpdate              = 0x52d2
 	opcodeFarmSystemMessage       = 0x526d
+	opcodeHarvestStorageMessage   = 0x213a6
 )
 
 // This map contains skill IDs for delayed damage effects (like bleeds)
@@ -868,6 +869,15 @@ func (t *eventPublisher) handleFarmPropPacket(p *packet.GamePacket) {
 			return
 		}
 		t.farmTracker.HandlePlantMessage(name, p.At)
+
+	case opcodeHarvestStorageMessage:
+		info, ok, err := packet.ParseHarvestStorageMessage(p)
+		if err != nil || !ok {
+			return
+		}
+		if data := t.farmTracker.HandleHarvestMessage(info.Quality, p.At); data != nil {
+			t.Broadcast("farm_prop", data)
+		}
 	}
 }
 

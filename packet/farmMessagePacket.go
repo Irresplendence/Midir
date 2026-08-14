@@ -30,3 +30,34 @@ func ParseFarmSystemMessage(p *GamePacket) (name string, ok bool, err error) {
 	}
 	return m[1], true, nil
 }
+
+var harvestStorageMessageRe = regexp.MustCompile(`^(Common|Fine|Finest) (.+?) \([^)]*\) x\d+ has been placed in storage\.`)
+
+// HarvestStorageInfo is the parsed form of a harvest-confirmation message
+// (opcode 0x213a6, "<Quality> <Item> (<farm>) x<n> has been placed in
+// storage."). This is where quality (Common/Fine/Finest) actually lives on
+// the wire - there is no separate numeric quality/score field anywhere in the
+// PropUpdate XML.
+type HarvestStorageInfo struct {
+	Quality string // "Common" | "Fine" | "Finest"
+	Name    string // e.g. "Blackberry", "Magic Cobweb" - the harvested product name, not the seed name
+}
+
+// ParseHarvestStorageMessage parses a 0x213a6 packet. ok=false (not an error)
+// if the message text doesn't match the storage-confirmation shape.
+func ParseHarvestStorageMessage(p *GamePacket) (info *HarvestStorageInfo, ok bool, err error) {
+	msg := p.Msg
+	if len(msg) < 3 {
+		return nil, false, fmt.Errorf("harvest storage message packet too short")
+	}
+	if msg[2].Type() != MessageElemTypeString {
+		return nil, false, fmt.Errorf("harvest storage message text has unexpected type %v", msg[2].Type())
+	}
+
+	text := msg[2].Data().(string)
+	m := harvestStorageMessageRe.FindStringSubmatch(text)
+	if m == nil {
+		return nil, false, nil
+	}
+	return &HarvestStorageInfo{Quality: m[1], Name: m[2]}, true, nil
+}

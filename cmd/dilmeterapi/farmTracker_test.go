@@ -182,6 +182,13 @@ func feedFrame(t *testing.T, ft *FarmTracker, data []byte) []*farmPropData {
 				if err == nil && ok {
 					ft.HandlePlantMessage(name, gp.At)
 				}
+			case opcodeHarvestStorageMessage:
+				info, ok, err := packet.ParseHarvestStorageMessage(gp)
+				if err == nil && ok {
+					if d := ft.HandleHarvestMessage(info.Quality, gp.At); d != nil {
+						results = append(results, d)
+					}
+				}
 			}
 		}
 	}
@@ -355,12 +362,20 @@ func TestFarmTrackerRenewableNodeHarvest(t *testing.T) {
 	// resetPlotForNextCycle only clears harvestEmitted (not plantEmitted), so a
 	// later "collecting" on the same fieldprop should fire harvest again -
 	// renewable nodes can be collected from repeatedly without a full replant.
+	// "collecting" alone isn't enough to emit though: same as the first
+	// harvest above, the quality message arrives after "collecting" for
+	// renewable nodes, so this should park (return nil) until it does.
 	again := ft.HandlePropUpdate(&packet.PropUpdateInfo{
 		Id:  fieldprop,
 		Tag: "collecting",
 		XML: packet.PropXMLAttrs{Owner: 4503599629455493, HasFieldProp: true, FieldProp: fieldprop, HasItemId: true, ItemId: 5041237},
 	})
-	if again == nil || again.Event != "harvest" {
-		t.Errorf("expected a second harvest event on a later \"collecting\", got %+v", again)
+	if again != nil {
+		t.Fatalf("expected \"collecting\" to park pending quality, not emit immediately, got %+v", again)
+	}
+
+	completed := ft.HandleHarvestMessage("Fine", time.Now())
+	if completed == nil || completed.Event != "harvest" || completed.Quality != "Fine" {
+		t.Errorf("expected the second harvest to complete once the quality message arrives, got %+v", completed)
 	}
 }
