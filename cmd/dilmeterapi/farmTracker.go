@@ -20,25 +20,38 @@ type farmPropData struct {
 }
 
 type plotState struct {
-	fieldprop    uint64
-	owner        uint64
-	itemid       uint64
-	support      uint64
-	supportIndex uint64
-	fertility    bool
-	special      bool
-	plantEmitted bool
-	readyEmitted bool
+	fieldprop      uint64
+	owner          uint64
+	itemid         uint64
+	support        uint64
+	supportIndex   uint64
+	fertility      bool
+	special        bool
+	plantEmitted   bool
+	readyEmitted   bool
+	harvestEmitted bool
 }
 
 // FarmTracker correlates PropAppears/PropUpdate/PropDisappears packets into
-// plant/tend/harvest events per plot (fieldprop).
+// plant/tend/ready/harvest events per plot (fieldprop).
 //
-// PropAppears never carries a fieldprop or itemid by itself - planting shows up
-// as a short burst of PropUpdates (tags "seed"/"single") that cross-reference a
-// seed-prop id and a field-prop id via linkprop/fieldprop before either carries
-// itemid. FarmTracker resolves that cluster of ids to one fieldprop and only
-// emits "plant" once an itemid is actually known for it.
+// Two different kinds of prop have been observed:
+//
+//   - Crop plots (tags "seed"/"single"/"grow"): PropAppears never carries a
+//     fieldprop or itemid by itself - planting shows up as a short burst of
+//     PropUpdates that cross-reference a seed-prop id and a field-prop id via
+//     linkprop/fieldprop before either carries itemid. They fully disappear
+//     (PropDisappears) on harvest, since the planted crop is a temporary
+//     player-owned object.
+//   - Renewable nodes - Tree/Quartz/Spider (tags "seed"/"empty"/"collecting"):
+//     a single PropUpdate at plant time already carries fieldprop==linkprop==id
+//     plus itemid, no multi-packet correlation needed. They never disappear
+//     (persistent, regrowable world objects) - harvest is signaled by the
+//     "collecting" tag instead of PropDisappears.
+//
+// FarmTracker resolves either shape to one fieldprop and only emits "plant"
+// once an itemid is actually known for it, regardless of which tag vocabulary
+// produced it.
 type FarmTracker struct {
 	mu sync.Mutex
 	// idToField maps any prop id we've seen (appear id, linkprop id, the field's
@@ -160,6 +173,17 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 		return snapshot("ready")
 	}
 
+	// harvest (renewable nodes only): Tree/Quartz/Spider never fire
+	// PropDisappears, so "collecting" - which fires as the harvest action
+	// itself - is the only harvest signal available for them. Checked before
+	// tend so the two can't both fire off the same packet.
+	if info.Tag == "collecting" && !plot.harvestEmitted {
+		plot.harvestEmitted = true
+		data := snapshot("harvest")
+		f.resetPlotForNextCycle(plot)
+		return data
+	}
+
 	// tend: supportIndex genuinely reset to 0 (not just an ambient increment).
 	if info.XML.HasSupportIndex && info.XML.SupportIndex == 0 && prevSupportIndex > 0 {
 		return snapshot("tend")
@@ -167,6 +191,21 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 
 	// Ambient ticks (e.g. passive "grow"/"completed" repeats) - deliberately not emitted.
 	return nil
+}
+
+// resetPlotForNextCycle only clears harvestEmitted after a renewable node's
+// "collecting"-triggered harvest - it deliberately leaves plantEmitted and
+// readyEmitted set. A real capture showed the harvest transaction's own
+// trailing "empty" state-echo packets still carrying the old itemid (and a
+// non-fresh, non-zero supportIndex) immediately after "collecting" fires;
+// resetting plantEmitted here caused those echoes to be misread as a fresh
+// plant. The tradeoff: if the same fieldprop is later genuinely replanted
+// (unconfirmed whether these nodes even reuse a fieldprop across regrowth
+// cycles, as opposed to getting a fresh one like crops do), that replant's
+// plant/ready won't re-fire. Missing a real replant is a safer failure mode
+// than fabricating a plant event that never happened.
+func (f *FarmTracker) resetPlotForNextCycle(plot *plotState) {
+	plot.harvestEmitted = false
 }
 
 // HandlePropDisappear resolves a disappearing prop's linked id (mirroring

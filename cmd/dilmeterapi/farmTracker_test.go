@@ -287,3 +287,60 @@ func TestFarmTrackerFullLifecycle(t *testing.T) {
 		}
 	}
 }
+
+// TestFarmTrackerRenewableNodeHarvest validates the "collecting"-tag harvest
+// path for renewable nodes (Tree/Quartz/Spider), which never fire
+// PropDisappears the way crop plots do - confirmed by a real capture showing
+// zero PropDisappears packets across four back-to-back harvests. The fixture
+// is a real captured Spider Web harvest: "collecting" tag, then the "Common
+// Magic Cobweb...placed in storage" confirmation, then the node resetting to
+// "empty" - all for fieldprop 45467842350940167.
+func TestFarmTrackerRenewableNodeHarvest(t *testing.T) {
+	ft := NewFarmTracker()
+
+	const fieldprop = 45467842350940167
+
+	// Prime with the plant this node would have already gone through in
+	// continuous operation (this capture starts mid-lifecycle, same situation
+	// as TestFarmTrackerHarvest above).
+	primed := ft.HandlePropUpdate(&packet.PropUpdateInfo{
+		Id:  fieldprop,
+		Tag: "empty",
+		XML: packet.PropXMLAttrs{
+			Owner:        4503599629455493,
+			HasFieldProp: true,
+			FieldProp:    fieldprop,
+			HasItemId:    true,
+			ItemId:       5041237,
+		},
+	})
+	if primed == nil || primed.Event != "plant" {
+		t.Fatalf("priming update unexpectedly did not produce a plant event: %+v", primed)
+	}
+
+	events := feedFrame(t, ft, loadHexFile(t, "testdata/renewable_harvest.hex"))
+
+	var sequence []string
+	for _, e := range events {
+		if e.FieldProp == "45467842350940167" {
+			sequence = append(sequence, e.Event)
+			t.Logf("  %+v", *e)
+		}
+	}
+
+	if len(sequence) != 1 || sequence[0] != "harvest" {
+		t.Fatalf("expected exactly one harvest event, got %v", sequence)
+	}
+
+	// resetPlotForNextCycle only clears harvestEmitted (not plantEmitted), so a
+	// later "collecting" on the same fieldprop should fire harvest again -
+	// renewable nodes can be collected from repeatedly without a full replant.
+	again := ft.HandlePropUpdate(&packet.PropUpdateInfo{
+		Id:  fieldprop,
+		Tag: "collecting",
+		XML: packet.PropXMLAttrs{Owner: 4503599629455493, HasFieldProp: true, FieldProp: fieldprop, HasItemId: true, ItemId: 5041237},
+	})
+	if again == nil || again.Event != "harvest" {
+		t.Errorf("expected a second harvest event on a later \"collecting\", got %+v", again)
+	}
+}
