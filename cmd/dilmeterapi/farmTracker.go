@@ -28,6 +28,7 @@ type plotState struct {
 	fertility    bool
 	special      bool
 	plantEmitted bool
+	readyEmitted bool
 }
 
 // FarmTracker correlates PropAppears/PropUpdate/PropDisappears packets into
@@ -149,12 +150,22 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 		return nil
 	}
 
+	// ready: the "completed" tag - confirmed via a live timed capture to fire
+	// exactly when the crop finishes growing (packet timestamp landed ~12m02s
+	// after the plant event, matching the in-game countdown almost exactly).
+	// Guarded by readyEmitted since the game keeps re-sending "completed" on
+	// ambient ticks after the crop is ready, same as it does for "grow".
+	if info.Tag == "completed" && !plot.readyEmitted {
+		plot.readyEmitted = true
+		return snapshot("ready")
+	}
+
 	// tend: supportIndex genuinely reset to 0 (not just an ambient increment).
 	if info.XML.HasSupportIndex && info.XML.SupportIndex == 0 && prevSupportIndex > 0 {
 		return snapshot("tend")
 	}
 
-	// Ambient ticks (e.g. passive "grow" increments) - deliberately not emitted.
+	// Ambient ticks (e.g. passive "grow"/"completed" repeats) - deliberately not emitted.
 	return nil
 }
 

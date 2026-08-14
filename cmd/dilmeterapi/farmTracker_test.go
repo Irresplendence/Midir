@@ -247,3 +247,43 @@ func TestFarmTrackerHarvest(t *testing.T) {
 		t.Errorf("expected a harvest event for fieldprop %d, got %+v", fieldprop, harvestEvents)
 	}
 }
+
+// TestFarmTrackerFullLifecycle replays three narrow capture windows - taken
+// from a single continuous ~14 minute live capture of one plot's entire
+// plant -> ready -> harvest cycle, trimmed to just the frames surrounding
+// each event to exclude unrelated traffic (other plots/players/chat) that
+// happened to be interleaved in the full stream. Confirms the tracker emits
+// exactly plant, then ready, then harvest for that plot, in that order.
+//
+// Real-world timestamps from the original full capture (not preserved by
+// these trimmed fixtures) showed plant->ready took 12m02s, matching the
+// in-game countdown shown at plant time almost exactly, and ready->harvest
+// took 53s (the player noticing and walking over).
+func TestFarmTrackerFullLifecycle(t *testing.T) {
+	ft := NewFarmTracker()
+
+	const targetField = "45467842350940162"
+
+	var events []*farmPropData
+	events = append(events, feedFrame(t, ft, loadHexFile(t, "testdata/lifecycle_plant.hex"))...)
+	events = append(events, feedFrame(t, ft, loadHexFile(t, "testdata/lifecycle_ready.hex"))...)
+	events = append(events, feedFrame(t, ft, loadHexFile(t, "testdata/lifecycle_harvest.hex"))...)
+
+	var sequence []string
+	for _, e := range events {
+		if e.FieldProp == targetField {
+			sequence = append(sequence, e.Event)
+			t.Logf("  %+v", *e)
+		}
+	}
+
+	want := []string{"plant", "ready", "harvest"}
+	if len(sequence) != len(want) {
+		t.Fatalf("expected event sequence %v for fieldprop %s, got %v", want, targetField, sequence)
+	}
+	for i, w := range want {
+		if sequence[i] != w {
+			t.Errorf("event %d: expected %q, got %q (full sequence: %v)", i, w, sequence[i], sequence)
+		}
+	}
+}
