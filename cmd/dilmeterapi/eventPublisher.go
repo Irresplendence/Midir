@@ -34,11 +34,12 @@ type eventPublisher struct {
 	sync.Mutex
 
 	// non-mutable
-	ctx        context.Context
-	packetCh   <-chan *packet.GamePacket
-	clientMap  map[uint32]*eventClient
-	sm         *SessionManager
-	aggregator *Aggregator
+	ctx         context.Context
+	packetCh    <-chan *packet.GamePacket
+	clientMap   map[uint32]*eventClient
+	sm          *SessionManager
+	aggregator  *Aggregator
+	farmTracker *FarmTracker
 	// mutable
 	currentClientId   uint32
 	playerUpdateBatch []*PlayerInfo
@@ -83,6 +84,9 @@ const (
 	opcodeSetFinisher             = 0x7921
 	opcodeDeadFeather             = 0x5403
 	opcodePublicStatUpdate        = 0x7532
+	opcodePropAppear              = 0x52d0
+	opcodePropDisappear           = 0x52d1
+	opcodePropUpdate              = 0x52d2
 )
 
 // This map contains skill IDs for delayed damage effects (like bleeds)
@@ -96,11 +100,12 @@ var doCountDelayedSkills = map[uint16]bool{
 
 func newEventPublisher(ctx context.Context, packetCh <-chan *packet.GamePacket, sm *SessionManager, isLive bool) *eventPublisher {
 	v := &eventPublisher{
-		ctx:        ctx,
-		packetCh:   packetCh,
-		clientMap:  make(map[uint32]*eventClient),
-		sm:         sm,
-		aggregator: NewAggregator(),
+		ctx:         ctx,
+		packetCh:    packetCh,
+		clientMap:   make(map[uint32]*eventClient),
+		sm:          sm,
+		aggregator:  NewAggregator(),
+		farmTracker: NewFarmTracker(),
 
 		currentClientId:   1,
 		playerUpdateBatch: make([]*PlayerInfo, 0),
@@ -272,6 +277,9 @@ func (t *eventPublisher) loop() {
 
 			// --- PATH 1: Update the live aggregator (for the UI) ---
 			t.aggregator.ProcessPacket(p)
+
+			// --- PATH 1.5: Farm prop tracking (plant/tend/harvest) ---
+			t.handleFarmPropPacket(p)
 
 			// --- PATH 2: Parse and log individual events (for saving files) ---
 			t.logPacketAsEvent(p)
@@ -817,6 +825,37 @@ func (t *eventPublisher) logPacketAsEvent(p *packet.GamePacket) {
 		case t.logCh <- e:
 		default:
 			logger.Println("Log channel full, dropping event!")
+		}
+	}
+}
+
+// handleFarmPropPacket handles PropAppears/PropUpdate/PropDisappears packets,
+// publishing a "farm_prop" WebSocket message for plant/tend/harvest events.
+func (t *eventPublisher) handleFarmPropPacket(p *packet.GamePacket) {
+	switch p.Op {
+	case opcodePropAppear:
+		info, err := packet.ParsePropAppearPacket(p)
+		if err != nil {
+			return
+		}
+		t.farmTracker.HandlePropAppear(info)
+
+	case opcodePropUpdate:
+		info, err := packet.ParsePropUpdatePacket(p)
+		if err != nil {
+			return
+		}
+		if data := t.farmTracker.HandlePropUpdate(info); data != nil {
+			t.Broadcast("farm_prop", data)
+		}
+
+	case opcodePropDisappear:
+		info, err := packet.ParsePropDisappearPacket(p)
+		if err != nil {
+			return
+		}
+		if data := t.farmTracker.HandlePropDisappear(info.Id, info.LinkId); data != nil {
+			t.Broadcast("farm_prop", data)
 		}
 	}
 }
