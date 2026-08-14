@@ -5,6 +5,7 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"os"
+	"strconv"
 	"testing"
 	"time"
 
@@ -360,22 +361,78 @@ func TestFarmTrackerRenewableNodeHarvest(t *testing.T) {
 	}
 
 	// resetPlotForNextCycle only clears harvestEmitted (not plantEmitted), so a
-	// later "collecting" on the same fieldprop should fire harvest again -
+	// later linkprop=0 reset on the same fieldprop should fire harvest again -
 	// renewable nodes can be collected from repeatedly without a full replant.
-	// "collecting" alone isn't enough to emit though: same as the first
-	// harvest above, the quality message arrives after "collecting" for
+	// linkprop=0 alone isn't enough to emit though: same as the first harvest
+	// above, the quality message tends to arrive after this signal for
 	// renewable nodes, so this should park (return nil) until it does.
 	again := ft.HandlePropUpdate(&packet.PropUpdateInfo{
 		Id:  fieldprop,
-		Tag: "collecting",
-		XML: packet.PropXMLAttrs{Owner: 4503599629455493, HasFieldProp: true, FieldProp: fieldprop, HasItemId: true, ItemId: 5041237},
+		Tag: "empty",
+		XML: packet.PropXMLAttrs{Owner: 4503599629455493, HasFieldProp: true, FieldProp: fieldprop, HasLinkProp: true, LinkProp: 0, HasItemId: true, ItemId: 5041237},
 	})
 	if again != nil {
-		t.Fatalf("expected \"collecting\" to park pending quality, not emit immediately, got %+v", again)
+		t.Fatalf("expected linkprop=0 to park pending quality, not emit immediately, got %+v", again)
 	}
 
 	completed := ft.HandleHarvestMessage("Fine", time.Now())
 	if completed == nil || completed.Event != "harvest" || completed.Quality != "Fine" {
 		t.Errorf("expected the second harvest to complete once the quality message arrives, got %+v", completed)
+	}
+}
+
+// TestFarmTrackerQuartzAndTreeHarvest is a regression test for a real bug
+// reported from production: Quartz (and Tree) harvests never fired at all,
+// leaving the overlay's tracked state stuck at "ready" forever. Root cause:
+// the original harvest detection only checked for the "collecting" tag,
+// which turned out to be Spider-specific - live Quartz and Tree captures
+// showed their harvest signaled by linkprop clearing to 0 directly, with no
+// "collecting" tag involved at all. Fixed by keying off linkprop==0 instead
+// (scoped to exclude crops' "single" tag, which shows this same pattern
+// right before their own, already-handled PropDisappears).
+func TestFarmTrackerQuartzAndTreeHarvest(t *testing.T) {
+	cases := []struct {
+		name      string
+		fixture   string
+		fieldprop uint64
+		itemid    uint64
+	}{
+		{"Quartz", "testdata/quartz_harvest.hex", 45467812286169101, 5041238},
+		{"Tree", "testdata/tree_harvest.hex", 45467812286169092, 5041235},
+	}
+
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			ft := NewFarmTracker()
+
+			primed := ft.HandlePropUpdate(&packet.PropUpdateInfo{
+				Id:  tc.fieldprop,
+				Tag: "seed",
+				XML: packet.PropXMLAttrs{
+					Owner:        4503599629455493,
+					HasFieldProp: true,
+					FieldProp:    tc.fieldprop,
+					HasItemId:    true,
+					ItemId:       tc.itemid,
+				},
+			})
+			if primed == nil || primed.Event != "plant" {
+				t.Fatalf("priming update unexpectedly did not produce a plant event: %+v", primed)
+			}
+
+			events := feedFrame(t, ft, loadHexFile(t, tc.fixture))
+
+			var sequence []string
+			for _, e := range events {
+				if e.FieldProp == strconv.FormatUint(tc.fieldprop, 10) {
+					sequence = append(sequence, e.Event)
+					t.Logf("  %+v", *e)
+				}
+			}
+
+			if len(sequence) != 1 || sequence[0] != "harvest" {
+				t.Fatalf("expected exactly one harvest event, got %v", sequence)
+			}
+		})
 	}
 }

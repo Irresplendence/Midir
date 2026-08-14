@@ -272,10 +272,23 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 	}
 
 	// harvest (renewable nodes only): Tree/Quartz/Spider never fire
-	// PropDisappears, so "collecting" - which fires as the harvest action
-	// itself - is the only harvest signal available for them. Checked before
-	// tend so the two can't both fire off the same packet.
-	if info.Tag == "collecting" && !plot.harvestEmitted {
+	// PropDisappears, so the signal is linkprop clearing to 0 instead -
+	// confirmed as the universal renewable-node harvest signal across all
+	// three: a live Quartz and Tree capture showed the post-harvest packet
+	// going straight to linkprop="0" with no "collecting" tag involved at
+	// all (that was a Spider-only extra step, wrongly over-generalized in an
+	// earlier version of this code - Spider does also clear linkprop=0 a
+	// couple packets after its "collecting", so keying off this instead
+	// covers all three node types with one condition).
+	//
+	// tag != "single" scopes this to renewable nodes only: crops show this
+	// exact same linkprop="0" pattern too (on their "single"-tagged field
+	// record, right before PropDisappears), which is already handled by
+	// HandlePropDisappear - without this exclusion, crop harvests would
+	// double-fire, once here and once there. Renewable nodes never use
+	// "single" for anything (their one per-plot record is always tagged
+	// "seed" or "empty"), so this doesn't cost them any coverage.
+	if info.XML.HasLinkProp && info.XML.LinkProp == 0 && info.Tag != "single" && !plot.harvestEmitted {
 		plot.harvestEmitted = true
 		data := snapshot("harvest")
 		f.resetPlotForNextCycle(plot)
@@ -283,9 +296,11 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 			data.Quality = q
 			return data
 		}
-		// Quality message for renewable nodes typically arrives just after
-		// "collecting", not before - park this event and let
-		// HandleHarvestMessage complete + emit it when that message shows up.
+		// The harvest confirmation message has arrived before this trigger
+		// in every renewable-node capture seen so far, so this path (park
+		// and wait) is expected to be a rare fallback rather than the norm -
+		// kept anyway since it's a strict superset of "just check the cache"
+		// and costs nothing to leave in place.
 		f.pendingHarvestEmit = data
 		return nil
 	}
