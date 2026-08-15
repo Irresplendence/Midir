@@ -35,6 +35,7 @@ type plotState struct {
 	plantEmitted   bool
 	readyEmitted   bool
 	harvestEmitted bool
+	harvestedAt    time.Time // zero until this plot's first renewable-node harvest; see renewableReplantDebounce
 }
 
 // FarmTracker correlates PropAppears/PropUpdate/PropDisappears packets into
@@ -98,6 +99,16 @@ const plantMessageCorrelationWindow = 15 * time.Second
 // arriving in the same packet burst as the harvest signal itself, but kept
 // generous for the same reason as plantMessageCorrelationWindow.
 const harvestMessageCorrelationWindow = 15 * time.Second
+
+// renewableReplantDebounce bounds how soon after a renewable node's harvest a
+// plant-shaped update can be treated as a genuine replant rather than the
+// harvest transaction's own trailing state-echo packets (which arrive within
+// the same burst as the harvest, still carrying the old itemid - see
+// resetPlotForNextCycle). A real replant requires the player to physically
+// walk over and interact again, which takes several seconds at minimum, so a
+// short debounce filters the echo out without adding noticeable latency to a
+// genuine replant.
+const renewableReplantDebounce = 2 * time.Second
 
 func NewFarmTracker() *FarmTracker {
 	return &FarmTracker{
@@ -253,9 +264,63 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 		}
 	}
 
-	// plant: first time we know both the fieldprop AND what was actually planted.
+	// harvest (renewable nodes only): Tree/Quartz/Spider never fire
+	// PropDisappears, so the signal is linkprop clearing to 0 instead -
+	// confirmed as the universal renewable-node harvest signal across all
+	// three: a live Quartz and Tree capture showed the post-harvest packet
+	// going straight to linkprop="0" with no "collecting" tag involved at
+	// all (that was a Spider-only extra step, wrongly over-generalized in an
+	// earlier version of this code - Spider does also clear linkprop=0 a
+	// couple packets after its "collecting", so keying off this instead
+	// covers all three node types with one condition).
+	//
+	// tag != "single" scopes this to renewable nodes only: crops show this
+	// exact same linkprop="0" pattern too (on their "single"-tagged field
+	// record, right before PropDisappears), which is already handled by
+	// HandlePropDisappear - without this exclusion, crop harvests would
+	// double-fire, once here and once there. Renewable nodes never use
+	// "single" for anything (their one per-plot record is always tagged
+	// "seed" or "empty"), so this doesn't cost them any coverage.
+	if info.XML.HasLinkProp && info.XML.LinkProp == 0 && info.Tag != "single" && !plot.harvestEmitted {
+		plot.harvestEmitted = true
+		data := snapshot("harvest")
+		f.resetPlotForNextCycle(plot, info.At)
+		if q := f.takeHarvestQuality(info.At); q != "" {
+			data.Quality = q
+			return data
+		}
+		// The harvest confirmation message has arrived before this trigger
+		// in every renewable-node capture seen so far, so this path (park
+		// and wait) is expected to be a rare fallback rather than the norm -
+		// kept anyway since it's a strict superset of "just check the cache"
+		// and costs nothing to leave in place.
+		f.pendingHarvestEmit = data
+		return nil
+	}
+
+	// plant: first time we know both the fieldprop AND what was actually
+	// planted. Checked after the harvest branch above (not before, as in
+	// earlier versions) so that a renewable node's repeat-harvest linkprop=0
+	// signal - which also carries HasItemId, since the old item never leaves
+	// the packet - is always claimed by the harvest branch first rather than
+	// being misread as a fresh plant.
 	if !plot.plantEmitted {
 		if info.XML.HasItemId {
+			// Renewable-node replant guard: swallow updates that land within
+			// renewableReplantDebounce of this plot's last harvest - those are
+			// the harvest transaction's own trailing echo packets, not a real
+			// replant. Leaves plantEmitted false so the next (real) update is
+			// re-evaluated from scratch once the debounce window passes. Note
+			// this is a best-effort heuristic, not a verified signal (no raw
+			// XML/tag capture has isolated a genuine replant from an ambient
+			// continuation on a renewable node yet) - watch for two failure
+			// modes empirically: replants still not firing "plant" (debounce
+			// too generous), or "plant" firing spuriously on a renewable node
+			// that regrew/was tended without a real replant (debounce too
+			// short, or no replant signal exists on the wire at all).
+			if !plot.harvestedAt.IsZero() && info.At.Sub(plot.harvestedAt) < renewableReplantDebounce {
+				return nil
+			}
 			plot.plantEmitted = true
 			if f.pendingPlantName != "" && !info.At.IsZero() {
 				delta := info.At.Sub(f.pendingPlantAt)
@@ -279,40 +344,6 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 		return snapshot("ready")
 	}
 
-	// harvest (renewable nodes only): Tree/Quartz/Spider never fire
-	// PropDisappears, so the signal is linkprop clearing to 0 instead -
-	// confirmed as the universal renewable-node harvest signal across all
-	// three: a live Quartz and Tree capture showed the post-harvest packet
-	// going straight to linkprop="0" with no "collecting" tag involved at
-	// all (that was a Spider-only extra step, wrongly over-generalized in an
-	// earlier version of this code - Spider does also clear linkprop=0 a
-	// couple packets after its "collecting", so keying off this instead
-	// covers all three node types with one condition).
-	//
-	// tag != "single" scopes this to renewable nodes only: crops show this
-	// exact same linkprop="0" pattern too (on their "single"-tagged field
-	// record, right before PropDisappears), which is already handled by
-	// HandlePropDisappear - without this exclusion, crop harvests would
-	// double-fire, once here and once there. Renewable nodes never use
-	// "single" for anything (their one per-plot record is always tagged
-	// "seed" or "empty"), so this doesn't cost them any coverage.
-	if info.XML.HasLinkProp && info.XML.LinkProp == 0 && info.Tag != "single" && !plot.harvestEmitted {
-		plot.harvestEmitted = true
-		data := snapshot("harvest")
-		f.resetPlotForNextCycle(plot)
-		if q := f.takeHarvestQuality(info.At); q != "" {
-			data.Quality = q
-			return data
-		}
-		// The harvest confirmation message has arrived before this trigger
-		// in every renewable-node capture seen so far, so this path (park
-		// and wait) is expected to be a rare fallback rather than the norm -
-		// kept anyway since it's a strict superset of "just check the cache"
-		// and costs nothing to leave in place.
-		f.pendingHarvestEmit = data
-		return nil
-	}
-
 	// tend: supportIndex genuinely reset to 0 (not just an ambient increment).
 	if info.XML.HasSupportIndex && info.XML.SupportIndex == 0 && prevSupportIndex > 0 {
 		return snapshot("tend")
@@ -322,19 +353,22 @@ func (f *FarmTracker) HandlePropUpdate(info *packet.PropUpdateInfo) *farmPropDat
 	return nil
 }
 
-// resetPlotForNextCycle only clears harvestEmitted after a renewable node's
-// "collecting"-triggered harvest - it deliberately leaves plantEmitted and
-// readyEmitted set. A real capture showed the harvest transaction's own
-// trailing "empty" state-echo packets still carrying the old itemid (and a
-// non-fresh, non-zero supportIndex) immediately after "collecting" fires;
-// resetting plantEmitted here caused those echoes to be misread as a fresh
-// plant. The tradeoff: if the same fieldprop is later genuinely replanted
-// (unconfirmed whether these nodes even reuse a fieldprop across regrowth
-// cycles, as opposed to getting a fresh one like crops do), that replant's
-// plant/ready won't re-fire. Missing a real replant is a safer failure mode
-// than fabricating a plant event that never happened.
-func (f *FarmTracker) resetPlotForNextCycle(plot *plotState) {
+// resetPlotForNextCycle clears plantEmitted/readyEmitted/harvestEmitted after
+// a renewable node's harvest, so a genuine replant on the same fieldprop
+// re-fires plant/ready instead of the plot going permanently "stuck" showing
+// stale state (confirmed via live capture 2026-08-15: replanted Tree/Quartz/
+// Spider plots never re-emitted plant/ready, only the next "tend" reflected
+// the new cycle). plantEmitted is guarded separately by renewableReplantDebounce
+// in the plant-detection branch above, to avoid the harvest transaction's own
+// trailing "empty" state-echo packets (still carrying the old itemid, arriving
+// within the same burst as the harvest) being misread as a fresh plant - an
+// earlier version of this code reset plantEmitted unconditionally and hit
+// exactly that false-positive.
+func (f *FarmTracker) resetPlotForNextCycle(plot *plotState, at time.Time) {
 	plot.harvestEmitted = false
+	plot.readyEmitted = false
+	plot.plantEmitted = false
+	plot.harvestedAt = at
 }
 
 // HandlePropDisappear resolves a disappearing prop's linked id (mirroring
