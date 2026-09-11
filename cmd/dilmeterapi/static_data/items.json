@@ -71,6 +71,10 @@
     "itemId": 1000016,
     "name": "NPC Folamh's Cane (Not to be Distributed)"
   },
+  "1000017": {
+    "itemId": 1000017,
+    "name": "레트로 전설의 태양과 달의 검"
+  },
   "1000018": {
     "itemId": 1000018,
     "name": "Moonlight Hunter's Silvered Blade"
@@ -251,6 +255,10 @@
     "itemId": 1000077,
     "name": "Celtic Royal Knight Sword (Remy Rental)"
   },
+  "1000078": {
+    "itemId": 1000078,
+    "name": "Golden Sword"
+  },
   "1000083": {
     "itemId": 1000083,
     "name": "Papillon Waltz Umbrella"
@@ -258,6 +266,14 @@
   "1000084": {
     "itemId": 1000084,
     "name": "Spring's Herald One-handed Sword"
+  },
+  "1000092": {
+    "itemId": 1000092,
+    "name": "Noble Einherjar's Valiant Sword"
+  },
+  "1000093": {
+    "itemId": 1000093,
+    "name": "Sainted Valkyrie's Radiant Sword"
   },
   "1001": {
     "itemId": 1001,
@@ -999,6 +1015,10 @@
     "itemId": 1040055,
     "name": "Soul Liberator Crossbow"
   },
+  "1040056": {
+    "itemId": 1040056,
+    "name": "총사대의 머스킷 보우"
+  },
   "1040058": {
     "itemId": 1040058,
     "name": "Celtic Royal Crossbow (Rental)"
@@ -1143,6 +1163,10 @@
     "itemId": 1040105,
     "name": "Bow of Ruination"
   },
+  "1040106": {
+    "itemId": 1040106,
+    "name": "Golden Bow"
+  },
   "1040107": {
     "itemId": 1040107,
     "name": "Wasteland Wanderer Sniper Rifle (Crossbow)"
@@ -1154,6 +1178,18 @@
   "1040111": {
     "itemId": 1040111,
     "name": "Wasteland Wanderer Sniper Rifle (Bow)"
+  },
+  "1040116": {
+    "itemId": 1040116,
+    "name": "A note that has the name of Walter's crush."
+  },
+  "1040117": {
+    "itemId": 1040117,
+    "name": "나오옷 임시등록"
+  },
+  "1040118": {
+    "itemId": 1040118,
+    "name": "나오옷 임시등록"
   },
   "1041": {
     "itemId": 1041,
@@ -1467,6 +1503,14 @@
     "itemId": 1060025,
     "name": "Wasteland Wanderer Fusion Cylinder"
   },
+  "1060026": {
+    "itemId": 1060026,
+    "name": "Horizon Seeker Cylinder"
+  },
+  "1060027": {
+    "itemId": 1060027,
+    "name": "Horizon Chaser Cylinder"
+  },
   "1060029": {
     "itemId": 1060029,
     "name": "Crystalline Shell Cylinder"
@@ -1546,6 +1590,10 @@
   "1070008": {
     "itemId": 1070008,
     "name": "Midnight Covenant Control Bar"
+  },
+  "1070009": {
+    "itemId": 1070009,
+    "name": "Legendary Pixel Control Bar"
   },
   "1070010": {
     "itemId": 1070010,
@@ -1818,6 +1866,10 @@
   "1080061": {
     "itemId": 1080061,
     "name": "Winter Snowbell Cello"
+  },
+  "1080062": {
+    "itemId": 1080062,
+    "name": "Gayageum"
   },
   "1081": {
     "itemId": 1081,
@@ -2301,7 +2353,7 @@
   },
   "1200000": {
     "itemId": 1200000,
-    "name": "Legendary Pixel Soluna Blade"
+    "name": "레트로 전설의 태양과 달의 검"
   },
   "1200001": {
     "itemId": 1200001,
@@ -2538,6 +2590,30 @@
   "1200070": {
     "itemId": 1200070,
     "name": "Rakshasa Pipe Greatsword"
+  },
+  "1200071": {
+    "itemId": 1200071,
+    "name": "Golden Blade"
+  },
+  "1200075": {
+    "itemId": 1200075,
+    "name": "Horizon Seeker Greatsword"
+  },
+  "1200076": {
+    "itemId": 1200076,
+    "name": "Horizon Chaser Greatsword"
+  },
+  "1200077": {
+    "itemId": 1200077,
+    "name": "Noble Einherjar's Valiant Greatsword"
+  },
+  "1200078": {
+    "itemId": 1200078,
+    "name": "Sainted Valkyrie's Radiant Greatsword"
+  },
+  "1200079": {
+    "itemId": 1200079,
+    "name": "Sweet Summer Watermelon Greatsword"
   },
   "12001": {
     "itemId": 12001,
@@ -4367,6 +4443,10 @@
     "itemId": 1230073,
     "name": "Lord of Ruination Staff"
   },
+  "1230074": {
+    "itemId": 1230074,
+    "name": "Golden Staff"
+  },
   "1230081": {
     "itemId": 1230081,
     "name": "Spring's Herald Staff"
@@ -5423,6 +5503,22 @@
     "itemId": 1250050,
     "name": "Blue Dragon Crescent Blade Lance"
   },
+  "1250051": {
+    "itemId": 1250051,
+    "name": "Horizon Seeker Twinblade"
+  },
+  "1250052": {
+    "itemId": 1250052,
+    "name": "Horizon Chaser Twinblade"
+  },
+  "1250054": {
+    "itemId": 1250054,
+    "name": "Noble Einherjar's Valiant Half-Moon Lance"
+  },
+  "1250055": {
+    "itemId": 1250055,
+    "name": "Sainted Valkyrie's Radiant Half-Moon Lance"
+  },
   "12501": {
     "itemId": 12501,
     "name": "Odd-Eye Belisha Support Puppet (30 Days)"
@@ -5863,6 +5959,10 @@
     "itemId": 1260013,
     "name": "Celtic Edged Knuckles"
   },
+  "1260014": {
+    "itemId": 1260014,
+    "name": "Legendary Pixel Knuckle"
+  },
   "1260015": {
     "itemId": 1260015,
     "name": "Gray Fomor Scroll"
@@ -5935,9 +6035,21 @@
     "itemId": 1260035,
     "name": "The Knuckles I Use"
   },
+  "1260036": {
+    "itemId": 1260036,
+    "name": "Varsity Prep Cycling Gloves (Knuckles)"
+  },
+  "1260037": {
+    "itemId": 1260037,
+    "name": "Varsity Prep Charming Cycling Gloves (Knuckles)"
+  },
   "1260038": {
     "itemId": 1260038,
     "name": "Aqua Shell Knuckles"
+  },
+  "1260041": {
+    "itemId": 1260041,
+    "name": "나오옷 임시등록"
   },
   "12601": {
     "itemId": 12601,
@@ -6319,6 +6431,10 @@
     "itemId": 1270022,
     "name": "Perseus Thundering Dual Guns"
   },
+  "1270023": {
+    "itemId": 1270023,
+    "name": "Legendary Pixel Dual Gun"
+  },
   "1270024": {
     "itemId": 1270024,
     "name": "Shadow Reaper Dual Guns"
@@ -6395,6 +6511,10 @@
     "itemId": 1270044,
     "name": "Steward of Secrets Dual Guns"
   },
+  "1270045": {
+    "itemId": 1270045,
+    "name": "Golden Dual Gun"
+  },
   "1270046": {
     "itemId": 1270046,
     "name": "Wasteland Wanderer Blasters"
@@ -6454,6 +6574,10 @@
   "1280013": {
     "itemId": 1280013,
     "name": "Perseus Swift Shuriken"
+  },
+  "1280014": {
+    "itemId": 1280014,
+    "name": "Legendary Pixel Shuriken"
   },
   "1280015": {
     "itemId": 1280015,
@@ -6634,6 +6758,14 @@
   "1290031": {
     "itemId": 1290031,
     "name": "Celtic Howling Chain Blade (Event)"
+  },
+  "1290036": {
+    "itemId": 1290036,
+    "name": "Noble Einherjar's Valiant Lantern"
+  },
+  "1290037": {
+    "itemId": 1290037,
+    "name": "Sainted Valkyrie's Radiant Lantern"
   },
   "1300": {
     "itemId": 1300,
@@ -7829,7 +7961,7 @@
   },
   "1400000": {
     "itemId": 1400000,
-    "name": "레트로 전설의 방패"
+    "name": "Legendary Pixel Shield"
   },
   "1400001": {
     "itemId": 1400001,
@@ -7934,6 +8066,22 @@
   "140003": {
     "itemId": 140003,
     "name": "@Bear Knuckle S"
+  },
+  "1400034": {
+    "itemId": 1400034,
+    "name": "Noble Einherjar's Valiant Greatshield"
+  },
+  "1400035": {
+    "itemId": 1400035,
+    "name": "Sainted Valkyrie's Radiant Greatshield"
+  },
+  "1400036": {
+    "itemId": 1400036,
+    "name": "Noble Einherjar's Valiant Shield"
+  },
+  "1400037": {
+    "itemId": 1400037,
+    "name": "Sainted Valkyrie's Radiant Shield"
   },
   "140004": {
     "itemId": 140004,
@@ -8809,7 +8957,7 @@
   },
   "1420021": {
     "itemId": 1420021,
-    "name": "Perseus Voiceless Arrow (Event)"
+    "name": "Perseus Voiceless Arrows (Event)"
   },
   "1420022": {
     "itemId": 1420022,
@@ -8845,11 +8993,27 @@
   },
   "1420031": {
     "itemId": 1420031,
-    "name": "Ability Points, or AP, are used to improve your Skills. You can gain AP when you level up, age, or complete some quests."
+    "name": "Fergseus Dynamic Bolts"
   },
   "1420032": {
     "itemId": 1420032,
-    "name": "A scroll used for controlling animals with evil magic."
+    "name": "Perseus Dynamic Bolts (Rental)"
+  },
+  "1420038": {
+    "itemId": 1420038,
+    "name": "A note that has the name of Craig's crush."
+  },
+  "1420039": {
+    "itemId": 1420039,
+    "name": "A note that has the name of Del's crush."
+  },
+  "1420040": {
+    "itemId": 1420040,
+    "name": "나오옷 임시등록"
+  },
+  "1420041": {
+    "itemId": 1420041,
+    "name": "나오옷 임시등록"
   },
   "142101": {
     "itemId": 142101,
@@ -8938,6 +9102,30 @@
   "1430014": {
     "itemId": 1430014,
     "name": "Forbidden Tome"
+  },
+  "1430015": {
+    "itemId": 1430015,
+    "name": "Corrupted Horizon Seeker Spectral Tome"
+  },
+  "1430016": {
+    "itemId": 1430016,
+    "name": "Pure Horizon Seeker Spectral Tome"
+  },
+  "1430017": {
+    "itemId": 1430017,
+    "name": "Fancy Horizon Seeker Spectral Tome"
+  },
+  "1430018": {
+    "itemId": 1430018,
+    "name": "Noble Horizon Seeker Spectral Tome"
+  },
+  "1430019": {
+    "itemId": 1430019,
+    "name": "Innocent Horizon Seeker Spectral Tome"
+  },
+  "1430020": {
+    "itemId": 1430020,
+    "name": "Great Horizon Seeker Spectral Tome"
   },
   "143007": {
     "itemId": 143007,
@@ -9135,6 +9323,30 @@
     "itemId": 1440016,
     "name": "Wasteland Wanderer Fusion Guard Cylinder"
   },
+  "1440017": {
+    "itemId": 1440017,
+    "name": "Great Horizon Seeker Catalytic Crest"
+  },
+  "1440018": {
+    "itemId": 1440018,
+    "name": "Corrupted Horizon Seeker Catalytic Crest"
+  },
+  "1440019": {
+    "itemId": 1440019,
+    "name": "Pure Horizon Seeker Catalytic Crest"
+  },
+  "1440020": {
+    "itemId": 1440020,
+    "name": "Fancy Horizon Seeker Catalytic Crest"
+  },
+  "1440021": {
+    "itemId": 1440021,
+    "name": "Noble Horizon Seeker Catalytic Crest"
+  },
+  "1440022": {
+    "itemId": 1440022,
+    "name": "Innocent Horizon Seeker Catalytic Crest"
+  },
   "1450000": {
     "itemId": 1450000,
     "name": "Midnight Covenant Marionette"
@@ -9150,6 +9362,10 @@
   "1450003": {
     "itemId": 1450003,
     "name": "Papillon Waltz Pierrot Marionette"
+  },
+  "1450004": {
+    "itemId": 1450004,
+    "name": "A note that has the name of Galvin's crush."
   },
   "1460000": {
     "itemId": 1460000,
@@ -15425,11 +15641,19 @@
   },
   "1640007": {
     "itemId": 1640007,
-    "name": "A scroll used for controlling animals with evil magic."
+    "name": "Nightbringer Iris Marionette"
   },
   "1640008": {
     "itemId": 1640008,
-    "name": "A scroll used for controlling animals with evil magic."
+    "name": "Nightbringer Iris Marionette"
+  },
+  "1640009": {
+    "itemId": 1640009,
+    "name": "나오옷 임시등록"
+  },
+  "1640010": {
+    "itemId": 1640010,
+    "name": "나오옷 임시등록"
   },
   "16401": {
     "itemId": 16401,
@@ -15526,6 +15750,10 @@
   "1650003": {
     "itemId": 1650003,
     "name": "Nightbringer Savior Healing Wand"
+  },
+  "1650004": {
+    "itemId": 1650004,
+    "name": "Tikka Wood Healing Wand"
   },
   "16501": {
     "itemId": 16501,
@@ -19965,11 +20193,11 @@
   },
   "17793": {
     "itemId": 17793,
-    "name": "Mystic Celtic Boots (M)"
+    "name": "Mystic Celtic Greaves (M)"
   },
   "17794": {
     "itemId": 17794,
-    "name": "Mystic Celtic Boots (F)"
+    "name": "Mystic Celtic Greaves (F)"
   },
   "17795": {
     "itemId": 17795,
@@ -28887,6 +29115,10 @@
     "itemId": 2030047,
     "name": "NPC Ater's Outfit"
   },
+  "2030048": {
+    "itemId": 2030048,
+    "name": "NPC Boss Folamh Outfit (Not to be Distributed)"
+  },
   "2031": {
     "itemId": 2031,
     "name": "Large Sum of Money"
@@ -32059,6 +32291,14 @@
     "itemId": 2110303,
     "name": "파이널 다크로드 머리 장식(여성용)"
   },
+  "2110305": {
+    "itemId": 2110305,
+    "name": "Saint's Glory Hood"
+  },
+  "2110306": {
+    "itemId": 2110306,
+    "name": "Saint's Glory Veil"
+  },
   "2110307": {
     "itemId": 2110307,
     "name": "Hyperion Eclipse Helionic Helm"
@@ -32090,6 +32330,22 @@
   "2110336": {
     "itemId": 2110336,
     "name": "Imperial Knight Formal Hat"
+  },
+  "2110346": {
+    "itemId": 2110346,
+    "name": "Chantilly Lace Fedora"
+  },
+  "2110347": {
+    "itemId": 2110347,
+    "name": "Chantilly Lace Veil"
+  },
+  "2110361": {
+    "itemId": 2110361,
+    "name": "Chantilly Lace Wig (M)"
+  },
+  "2110362": {
+    "itemId": 2110362,
+    "name": "Chantilly Lace Wig (F)"
   },
   "2111": {
     "itemId": 2111,
@@ -34003,6 +34259,38 @@
     "itemId": 2120644,
     "name": "Wasteland Wanderer Wig (F)"
   },
+  "2120648": {
+    "itemId": 2120648,
+    "name": "Matthias's Hairstyle Wig (M)"
+  },
+  "2120649": {
+    "itemId": 2120649,
+    "name": "Matthias's Hairstyle Wig (F)"
+  },
+  "2120650": {
+    "itemId": 2120650,
+    "name": "Eochaid's Wig (M)"
+  },
+  "2120651": {
+    "itemId": 2120651,
+    "name": "Eochaid's Wig (F)"
+  },
+  "2120652": {
+    "itemId": 2120652,
+    "name": "Loiscneach's Wig (M)"
+  },
+  "2120653": {
+    "itemId": 2120653,
+    "name": "Loiscneach's Wig (F)"
+  },
+  "2120654": {
+    "itemId": 2120654,
+    "name": "Cowenna's Hairstyle Wig (M)"
+  },
+  "2120655": {
+    "itemId": 2120655,
+    "name": "Cowenna's Hairstyle Wig (F)"
+  },
   "2120656": {
     "itemId": 2120656,
     "name": "Spring's Herald Wig (M)"
@@ -34010,6 +34298,10 @@
   "2120657": {
     "itemId": 2120657,
     "name": "Spring's Herald Wig (F)"
+  },
+  "2120658": {
+    "itemId": 2120658,
+    "name": "Varsity Prep Kitty Hat"
   },
   "2120659": {
     "itemId": 2120659,
@@ -34027,6 +34319,14 @@
     "itemId": 2120662,
     "name": "Twilight Fairy Wig (F)"
   },
+  "2120667": {
+    "itemId": 2120667,
+    "name": "Horizon Seeker Wig (M)"
+  },
+  "2120668": {
+    "itemId": 2120668,
+    "name": "Horizon Seeker Wig (F)"
+  },
   "2120678": {
     "itemId": 2120678,
     "name": "Seraphic Cantabile Wig (M)"
@@ -34034,6 +34334,14 @@
   "2120679": {
     "itemId": 2120679,
     "name": "Seraphic Cantabile Wig (F)"
+  },
+  "2120688": {
+    "itemId": 2120688,
+    "name": "Noble Einherjar Winged Helm"
+  },
+  "2120689": {
+    "itemId": 2120689,
+    "name": "Sainted Valkyrie Winged Circlet"
   },
   "2121": {
     "itemId": 2121,
@@ -38407,6 +38715,10 @@
     "itemId": 220112,
     "name": "Bear Pajamas"
   },
+  "2201125": {
+    "itemId": 2201125,
+    "name": "Special Pan Small Logo Outfit (M)"
+  },
   "2201126": {
     "itemId": 2201126,
     "name": "Special Pan Small Logo Outfit (F)"
@@ -39527,6 +39839,38 @@
     "itemId": 2201515,
     "name": "Special Winter Casual Wear (F)"
   },
+  "2201516": {
+    "itemId": 2201516,
+    "name": "Special Saint's Glory Formal Wear (M)"
+  },
+  "2201517": {
+    "itemId": 2201517,
+    "name": "Special Saint's Glory Formal Wear (F)"
+  },
+  "2201518": {
+    "itemId": 2201518,
+    "name": "Special Saint's Glory Wear (M)"
+  },
+  "2201519": {
+    "itemId": 2201519,
+    "name": "Special Saint's Glory Wear (F)"
+  },
+  "2201520": {
+    "itemId": 2201520,
+    "name": "Saint's Glory Formal Wear (M)"
+  },
+  "2201521": {
+    "itemId": 2201521,
+    "name": "Saint's Glory Formal Wear (F)"
+  },
+  "2201522": {
+    "itemId": 2201522,
+    "name": "Saint's Glory Wear (M)"
+  },
+  "2201523": {
+    "itemId": 2201523,
+    "name": "Saint's Glory Wear (F)"
+  },
   "2201526": {
     "itemId": 2201526,
     "name": "Echo Marionette Outfit (F)"
@@ -39607,6 +39951,46 @@
     "itemId": 2201571,
     "name": "Papillon Waltz Wear (F)"
   },
+  "2201576": {
+    "itemId": 2201576,
+    "name": "Special Varsity Prep Uniform (M)"
+  },
+  "2201577": {
+    "itemId": 2201577,
+    "name": "Special Varsity Prep Uniform (F)"
+  },
+  "2201578": {
+    "itemId": 2201578,
+    "name": "Varsity Prep Uniform (M)"
+  },
+  "2201579": {
+    "itemId": 2201579,
+    "name": "Varsity Prep Uniform (F)"
+  },
+  "2201580": {
+    "itemId": 2201580,
+    "name": "Special Varsity Prep Casual Uniform (M)"
+  },
+  "2201581": {
+    "itemId": 2201581,
+    "name": "Special Varsity Prep Casual Uniform (F)"
+  },
+  "2201582": {
+    "itemId": 2201582,
+    "name": "Varsity Prep Casual Uniform (M)"
+  },
+  "2201583": {
+    "itemId": 2201583,
+    "name": "Varsity Prep Casual Uniform (F)"
+  },
+  "2201584": {
+    "itemId": 2201584,
+    "name": "Refashioned Long Leather Coat"
+  },
+  "2201585": {
+    "itemId": 2201585,
+    "name": "Refashioned Ceremonial Dress"
+  },
   "2201586": {
     "itemId": 2201586,
     "name": "Special Wasteland Wanderer Recon Outfit (M)"
@@ -39639,9 +40023,41 @@
     "itemId": 2201593,
     "name": "Wasteland Wanderer Combat Outfit (F)"
   },
+  "2201598": {
+    "itemId": 2201598,
+    "name": "Matthias's Outfit (M)"
+  },
+  "2201599": {
+    "itemId": 2201599,
+    "name": "Matthias's Outfit (F)"
+  },
   "22016": {
     "itemId": 22016,
     "name": "Blacksmith Dan 5 Uniform"
+  },
+  "2201609": {
+    "itemId": 2201609,
+    "name": "Eochaid's Outfit (M)"
+  },
+  "2201610": {
+    "itemId": 2201610,
+    "name": "Eochaid's Outfit (F)"
+  },
+  "2201611": {
+    "itemId": 2201611,
+    "name": "Loiscneach's Outfit (M)"
+  },
+  "2201612": {
+    "itemId": 2201612,
+    "name": "Loiscneach's Outfit (F)"
+  },
+  "2201613": {
+    "itemId": 2201613,
+    "name": "Cowenna's Outfit (M)"
+  },
+  "2201614": {
+    "itemId": 2201614,
+    "name": "Cowenna's Outfit (F)"
   },
   "2201623": {
     "itemId": 2201623,
@@ -39658,6 +40074,22 @@
   "2201626": {
     "itemId": 2201626,
     "name": "Spring's Herald Outfit (F)"
+  },
+  "2201631": {
+    "itemId": 2201631,
+    "name": "Special Horizon Seeker Tunic (M)"
+  },
+  "2201632": {
+    "itemId": 2201632,
+    "name": "Special Horizon Seeker Tunic (F)"
+  },
+  "2201633": {
+    "itemId": 2201633,
+    "name": "Horizon Seeker Tunic (M)"
+  },
+  "2201634": {
+    "itemId": 2201634,
+    "name": "Horizon Seeker Tunic (F)"
   },
   "2201639": {
     "itemId": 2201639,
@@ -39691,6 +40123,22 @@
     "itemId": 2201646,
     "name": "Special Twilight Fairy Casual Dress (F)"
   },
+  "2201647": {
+    "itemId": 2201647,
+    "name": "Eluned Special Ailionoa Haute Dress (M)"
+  },
+  "2201648": {
+    "itemId": 2201648,
+    "name": "Eluned Special Festive Eastern Wear (F)"
+  },
+  "2201649": {
+    "itemId": 2201649,
+    "name": "Eluned Ailionoa Haute Dress (M)"
+  },
+  "2201650": {
+    "itemId": 2201650,
+    "name": "Eluned Festive Eastern Wear (F)"
+  },
   "2201666": {
     "itemId": 2201666,
     "name": "Summer Marine Outfit (M)"
@@ -39698,6 +40146,22 @@
   "2201667": {
     "itemId": 2201667,
     "name": "Summer Marine Outfit (F)"
+  },
+  "2201670": {
+    "itemId": 2201670,
+    "name": "Special Noble Einherjar Surcoat (M)"
+  },
+  "2201671": {
+    "itemId": 2201671,
+    "name": "Special Sainted Valkyrie Dress (F)"
+  },
+  "2201672": {
+    "itemId": 2201672,
+    "name": "Noble Einherjar Surcoat (M)"
+  },
+  "2201673": {
+    "itemId": 2201673,
+    "name": "Sainted Valkyrie Dress (F)"
   },
   "2201686": {
     "itemId": 2201686,
@@ -39750,6 +40214,22 @@
   "22017": {
     "itemId": 22017,
     "name": "Blacksmith Dan 6 Uniform"
+  },
+  "2201706": {
+    "itemId": 2201706,
+    "name": "Special Chantilly Lace Dresswear (M)"
+  },
+  "2201707": {
+    "itemId": 2201707,
+    "name": "Special Chantilly Lace Corselet (F)"
+  },
+  "2201708": {
+    "itemId": 2201708,
+    "name": "Chantilly Lace Dresswear (M)"
+  },
+  "2201709": {
+    "itemId": 2201709,
+    "name": "Chantilly Lace Corselet (F)"
   },
   "22018": {
     "itemId": 22018,
@@ -42911,6 +43391,14 @@
     "itemId": 2300608,
     "name": "Winter Casual Gloves (F)"
   },
+  "2300611": {
+    "itemId": 2300611,
+    "name": "Saint's Glory Gloves (M)"
+  },
+  "2300612": {
+    "itemId": 2300612,
+    "name": "Saint's Glory Hand Ornament (F)"
+  },
   "2300613": {
     "itemId": 2300613,
     "name": "Forest Ranger Gloves (M)"
@@ -42967,6 +43455,30 @@
     "itemId": 2300638,
     "name": "Papillon Waltz Gloves (F) (Curtain Call)"
   },
+  "2300639": {
+    "itemId": 2300639,
+    "name": "Matthias's Gloves (M)"
+  },
+  "2300640": {
+    "itemId": 2300640,
+    "name": "Matthias's Gloves (F)"
+  },
+  "2300641": {
+    "itemId": 2300641,
+    "name": "Loiscneach's Gloves (M)"
+  },
+  "2300642": {
+    "itemId": 2300642,
+    "name": "Loiscneach's Gloves (F)"
+  },
+  "2300643": {
+    "itemId": 2300643,
+    "name": "Cowenna's Gloves (M)"
+  },
+  "2300644": {
+    "itemId": 2300644,
+    "name": "Cowenna's Gloves (F)"
+  },
   "2300645": {
     "itemId": 2300645,
     "name": "Spring's Herald Bracelet (M)"
@@ -42974,6 +43486,14 @@
   "2300646": {
     "itemId": 2300646,
     "name": "Spring's Herald Hand Chain (F)"
+  },
+  "2300647": {
+    "itemId": 2300647,
+    "name": "Varsity Prep Bracelet and Ring (M)"
+  },
+  "2300648": {
+    "itemId": 2300648,
+    "name": "Varsity Prep Bracelets (F)"
   },
   "2300653": {
     "itemId": 2300653,
@@ -42990,6 +43510,22 @@
   "2300656": {
     "itemId": 2300656,
     "name": "Twilight Fairy Gloves (F)"
+  },
+  "2300661": {
+    "itemId": 2300661,
+    "name": "Eluned Ailionoa Haute Gloves (M)"
+  },
+  "2300662": {
+    "itemId": 2300662,
+    "name": "Eluned Festive Eastern Wristbands (F)"
+  },
+  "2300663": {
+    "itemId": 2300663,
+    "name": "Horizon Seeker Gloves (M)"
+  },
+  "2300664": {
+    "itemId": 2300664,
+    "name": "Horizon Seeker Gloves (F)"
   },
   "2300672": {
     "itemId": 2300672,
@@ -43022,6 +43558,14 @@
   "2300687": {
     "itemId": 2300687,
     "name": "Shadow Reaper Gloves (F)"
+  },
+  "2300691": {
+    "itemId": 2300691,
+    "name": "Chantilly Lace Glovettes (M)"
+  },
+  "2300692": {
+    "itemId": 2300692,
+    "name": "Chantilly Lace Gloves (F)"
   },
   "2301": {
     "itemId": 2301,
@@ -43194,6 +43738,14 @@
   "2310032": {
     "itemId": 2310032,
     "name": "Saint Guardian's Gauntlets (F)"
+  },
+  "2310044": {
+    "itemId": 2310044,
+    "name": "Noble Einherjar Vambraces (M)"
+  },
+  "2310045": {
+    "itemId": 2310045,
+    "name": "Sainted Valkyrie Gloves (F)"
   },
   "2311": {
     "itemId": 2311,
@@ -45531,6 +46083,14 @@
     "itemId": 2400664,
     "name": "Winter Casual Shoes (F)"
   },
+  "2400669": {
+    "itemId": 2400669,
+    "name": "Saint's Glory Shoes (M)"
+  },
+  "2400670": {
+    "itemId": 2400670,
+    "name": "Saint's Glory Shoes (F)"
+  },
   "2400671": {
     "itemId": 2400671,
     "name": "Forest Ranger Boots (M)"
@@ -45587,6 +46147,38 @@
     "itemId": 2400705,
     "name": "Papillon Waltz Shoes (F) (Curtain Call)"
   },
+  "2400706": {
+    "itemId": 2400706,
+    "name": "Matthias's Boots (M)"
+  },
+  "2400707": {
+    "itemId": 2400707,
+    "name": "Matthias's Boots (F)"
+  },
+  "2400712": {
+    "itemId": 2400712,
+    "name": "Eochaid's Shoes (M)"
+  },
+  "2400713": {
+    "itemId": 2400713,
+    "name": "Eochaid's Shoes (F)"
+  },
+  "2400714": {
+    "itemId": 2400714,
+    "name": "Loiscneach's Boots (M)"
+  },
+  "2400715": {
+    "itemId": 2400715,
+    "name": "Loiscneach's Boots (F)"
+  },
+  "2400716": {
+    "itemId": 2400716,
+    "name": "Cowenna's Boots (M)"
+  },
+  "2400717": {
+    "itemId": 2400717,
+    "name": "Cowenna's Boots (F)"
+  },
   "2400718": {
     "itemId": 2400718,
     "name": "Spring's Herald Sandals (M)"
@@ -45594,6 +46186,14 @@
   "2400719": {
     "itemId": 2400719,
     "name": "Spring's Herald Heels (F)"
+  },
+  "2400720": {
+    "itemId": 2400720,
+    "name": "Varsity Prep Shoes (M)"
+  },
+  "2400721": {
+    "itemId": 2400721,
+    "name": "Varsity Prep Shoes (F)"
   },
   "2400726": {
     "itemId": 2400726,
@@ -45610,6 +46210,22 @@
   "2400729": {
     "itemId": 2400729,
     "name": "Twilight Fairy Shoes (F)"
+  },
+  "2400734": {
+    "itemId": 2400734,
+    "name": "Eluned Ailionoa Haute Heels (M)"
+  },
+  "2400735": {
+    "itemId": 2400735,
+    "name": "Eluned Festive Eastern Shoes (F)"
+  },
+  "2400736": {
+    "itemId": 2400736,
+    "name": "Horizon Seeker Boots (M)"
+  },
+  "2400737": {
+    "itemId": 2400737,
+    "name": "Horizon Seeker Boots (F)"
   },
   "2400745": {
     "itemId": 2400745,
@@ -45642,6 +46258,22 @@
   "2400760": {
     "itemId": 2400760,
     "name": "Shadow Reaper Boots (F)"
+  },
+  "2400775": {
+    "itemId": 2400775,
+    "name": "Noble Einherjar Greaves (M)"
+  },
+  "2400776": {
+    "itemId": 2400776,
+    "name": "Sainted Valkyrie Heels (F)"
+  },
+  "2400777": {
+    "itemId": 2400777,
+    "name": "Chantilly Lace Boots (M)"
+  },
+  "2400778": {
+    "itemId": 2400778,
+    "name": "Chantilly Lace Heels (F)"
   },
   "2410000": {
     "itemId": 2410000,
@@ -49173,7 +49805,7 @@
   },
   "28983": {
     "itemId": 28983,
-    "name": "Mystic Celtic Wig and Diadem (M)"
+    "name": "Mystic Celtic Wig and Faceguard (M)"
   },
   "28984": {
     "itemId": 28984,
@@ -49181,7 +49813,7 @@
   },
   "28985": {
     "itemId": 28985,
-    "name": "Mystic Celtic Wig and Diadem (F)"
+    "name": "Mystic Celtic Wig and Faceguard (F)"
   },
   "28986": {
     "itemId": 28986,
@@ -51215,6 +51847,10 @@
     "itemId": 3000170,
     "name": "Fluffy Earrings (Facewear)"
   },
+  "3000174": {
+    "itemId": 3000174,
+    "name": "Matthias's Beard (Facewear)"
+  },
   "3000187": {
     "itemId": 3000187,
     "name": "Spring Butterfly Ornament (Facewear)"
@@ -51230,6 +51866,18 @@
   "3000190": {
     "itemId": 3000190,
     "name": "Jeweled Forehead Chain (Facewear)"
+  },
+  "3000191": {
+    "itemId": 3000191,
+    "name": "Fluttering Summer Heart Holo-effect (Facewear)"
+  },
+  "3000195": {
+    "itemId": 3000195,
+    "name": "Chantilly Lace Mask (Facewear)"
+  },
+  "3000196": {
+    "itemId": 3000196,
+    "name": "Chantilly Lace Spirit Teardrop Gem (Facewear)"
   },
   "30002": {
     "itemId": 30002,
@@ -51906,6 +52554,10 @@
   "3100019": {
     "itemId": 3100019,
     "name": "Drosera (Rental)"
+  },
+  "3100020": {
+    "itemId": 3100020,
+    "name": "Tricolor Jeweled Ring"
   },
   "31001": {
     "itemId": 31001,
@@ -53479,6 +54131,70 @@
     "itemId": 3140146,
     "name": "Wispling Cerise Plus Support Puppet"
   },
+  "3140148": {
+    "itemId": 3140148,
+    "name": "Ancient Aria Zephyr Plus Support Puppet"
+  },
+  "3140149": {
+    "itemId": 3140149,
+    "name": "Aria Zephyr Plus Support Puppet"
+  },
+  "3140150": {
+    "itemId": 3140150,
+    "name": "Ancient Aria Altus Plus Support Puppet"
+  },
+  "3140151": {
+    "itemId": 3140151,
+    "name": "Aria Altus Plus Support Puppet"
+  },
+  "3140152": {
+    "itemId": 3140152,
+    "name": "Ancient Sylph Brisa Plus Support Puppet"
+  },
+  "3140153": {
+    "itemId": 3140153,
+    "name": "Sylph Brisa Plus Support Puppet"
+  },
+  "3140154": {
+    "itemId": 3140154,
+    "name": "Ancient Sylph Haze Plus Support Puppet"
+  },
+  "3140155": {
+    "itemId": 3140155,
+    "name": "Sylph Haze Plus Support Puppet"
+  },
+  "3140156": {
+    "itemId": 3140156,
+    "name": "Ancient Pigeon Plus Support Puppet"
+  },
+  "3140157": {
+    "itemId": 3140157,
+    "name": "Pigeon Plus Support Puppet"
+  },
+  "3140158": {
+    "itemId": 3140158,
+    "name": "Ancient Dove Plus Support Puppet"
+  },
+  "3140159": {
+    "itemId": 3140159,
+    "name": "Dove Plus Support Puppet"
+  },
+  "3140160": {
+    "itemId": 3140160,
+    "name": "Ancient Weasel Plus Support Puppet"
+  },
+  "3140161": {
+    "itemId": 3140161,
+    "name": "Weasel Plus Support Puppet"
+  },
+  "3140162": {
+    "itemId": 3140162,
+    "name": "Ancient Ferret Plus Support Puppet"
+  },
+  "3140163": {
+    "itemId": 3140163,
+    "name": "Ferret Plus Support Puppet"
+  },
   "3141": {
     "itemId": 3141,
     "name": "NPC 딜리스 신 헤어"
@@ -54095,6 +54811,70 @@
     "itemId": 3160160,
     "name": "Wonderland Lop-Eared Gentlebunny Halo"
   },
+  "3160161": {
+    "itemId": 3160161,
+    "name": "Brilliant Saint's Glory Wreath Halo"
+  },
+  "3160162": {
+    "itemId": 3160162,
+    "name": "Pure Saint's Glory Wreath Halo"
+  },
+  "3160163": {
+    "itemId": 3160163,
+    "name": "Radiant Saint's Glory Wreath Halo"
+  },
+  "3160164": {
+    "itemId": 3160164,
+    "name": "Serene Saint's Glory Wreath Halo"
+  },
+  "3160167": {
+    "itemId": 3160167,
+    "name": "Brilliant Saint's Glory Nimbus Halo"
+  },
+  "3160168": {
+    "itemId": 3160168,
+    "name": "Pure Saint's Glory Nimbus Halo"
+  },
+  "3160169": {
+    "itemId": 3160169,
+    "name": "Dazzling Saint's Glory Nimbus Halo"
+  },
+  "3160170": {
+    "itemId": 3160170,
+    "name": "Serene Saint's Glory Nimbus Halo"
+  },
+  "3160171": {
+    "itemId": 3160171,
+    "name": "Brilliant Saint's Glory Mandala Halo"
+  },
+  "3160172": {
+    "itemId": 3160172,
+    "name": "Pure Saint's Glory Mandala Halo"
+  },
+  "3160173": {
+    "itemId": 3160173,
+    "name": "Dazzling Saint's Glory Mandala Halo"
+  },
+  "3160174": {
+    "itemId": 3160174,
+    "name": "Serene Saint's Glory Mandala Halo"
+  },
+  "3160175": {
+    "itemId": 3160175,
+    "name": "Spirit Short Bow"
+  },
+  "3160176": {
+    "itemId": 3160176,
+    "name": "Spirit Short Sword"
+  },
+  "3160177": {
+    "itemId": 3160177,
+    "name": "Spirit Dagger"
+  },
+  "3160178": {
+    "itemId": 3160178,
+    "name": "Spirit Hatchet"
+  },
   "3160179": {
     "itemId": 3160179,
     "name": "Pure Papillon Ring Halo"
@@ -54417,67 +55197,91 @@
   },
   "3200060": {
     "itemId": 3200060,
-    "name": "Mysterious Ribbon Bell Cat Tail"
+    "name": "Dashing Belled Cat Tail"
   },
   "3200061": {
     "itemId": 3200061,
-    "name": "Mysterious Ribbon Bell Cat Tail (1 Year)"
+    "name": "히트 비트 리본과 벨을 곁들인 캣 꼬리(1년)"
   },
   "3200062": {
     "itemId": 3200062,
-    "name": "Petite Devil Tail"
+    "name": "Dashing Jeweled Devil Tail"
   },
   "3200063": {
     "itemId": 3200063,
-    "name": "Petite Devil Tail (1 Year)"
+    "name": "히트 비트 데빌 꼬리(1년)"
   },
   "3200064": {
     "itemId": 3200064,
-    "name": "Shark Tail"
+    "name": "Dashing Shark Tail"
   },
   "3200065": {
     "itemId": 3200065,
-    "name": "Shark Tail (1 Year)"
+    "name": "히트 비트 샤크 꼬리(1년)"
   },
   "3200066": {
     "itemId": 3200066,
-    "name": "Spiked Dragon Tail"
+    "name": "Dashing Spiked Dragon Tail"
   },
   "3200067": {
     "itemId": 3200067,
-    "name": "Spiked Dragon Tail (1 Year)"
+    "name": "히트 비트 스파이크 드래곤 꼬리(1년)"
   },
   "3200068": {
     "itemId": 3200068,
-    "name": "Heart Charm Tail"
+    "name": "Dashing Charm Tail"
   },
   "3200069": {
     "itemId": 3200069,
-    "name": "Heart Charm Tail (1 Year)"
+    "name": "히트 비트 하트 꼬리(1년)"
   },
   "3200070": {
     "itemId": 3200070,
     "name": "Dashing Dragon Tail"
   },
+  "3200071": {
+    "itemId": 3200071,
+    "name": "히트 비트 드래곤 꼬리(1년)"
+  },
   "3200072": {
     "itemId": 3200072,
     "name": "Dashing Armored Dragon Tail"
+  },
+  "3200073": {
+    "itemId": 3200073,
+    "name": "네오 히트 비트 드래곤 꼬리(1년)"
   },
   "3200074": {
     "itemId": 3200074,
     "name": "Dashing Long-Haired Cat Tail"
   },
+  "3200075": {
+    "itemId": 3200075,
+    "name": "히트 비트 복실 털 고양이 꼬리(1년)"
+  },
   "3200076": {
     "itemId": 3200076,
     "name": "Dashing Long-Haired Tabby Cat Tail"
+  },
+  "3200077": {
+    "itemId": 3200077,
+    "name": "네오 히트 비트 복실 털 고양이 꼬리(1년)"
   },
   "3200078": {
     "itemId": 3200078,
     "name": "Dashing Curly Horse Tail"
   },
+  "3200079": {
+    "itemId": 3200079,
+    "name": "히트 비트 스파이럴 꼬리(1년)"
+  },
   "3200080": {
     "itemId": 3200080,
     "name": "Dashing Ribboned Horse Tail"
+  },
+  "3200081": {
+    "itemId": 3200081,
+    "name": "히트 비트 스파이럴 리본 꼬리(1년)"
   },
   "3400000": {
     "itemId": 3400000,
@@ -54642,6 +55446,10 @@
   "3400046": {
     "itemId": 3400046,
     "name": "NPC Fuamnach's Robe"
+  },
+  "3400048": {
+    "itemId": 3400048,
+    "name": "Robe of Insight"
   },
   "3500000": {
     "itemId": 3500000,
@@ -56579,6 +57387,10 @@
     "itemId": 3500561,
     "name": "Elegant Circus Aerialist's Hoop"
   },
+  "3500562": {
+    "itemId": 3500562,
+    "name": "Pixel Cloak"
+  },
   "3500563": {
     "itemId": 3500563,
     "name": "Confident Innocent Cielo Wings"
@@ -58059,6 +58871,22 @@
     "itemId": 3501016,
     "name": "Glorious Oblivion Kaiser Cape"
   },
+  "3501017": {
+    "itemId": 3501017,
+    "name": "Blissful Puppy Backpack"
+  },
+  "3501018": {
+    "itemId": 3501018,
+    "name": "Starry Kitty Backpack"
+  },
+  "3501019": {
+    "itemId": 3501019,
+    "name": "Moon Kitty Backpack"
+  },
+  "3501020": {
+    "itemId": 3501020,
+    "name": "Medicine Backpack"
+  },
   "3501101": {
     "itemId": 3501101,
     "name": "Glorious Wasteland Wanderer Coat"
@@ -58155,6 +58983,26 @@
     "itemId": 3501124,
     "name": "Graceful Vernal Spirit Wings"
   },
+  "3501128": {
+    "itemId": 3501128,
+    "name": "Radiant Varsity Prep Wings"
+  },
+  "3501129": {
+    "itemId": 3501129,
+    "name": "Innocent Varsity Prep Wings"
+  },
+  "3501130": {
+    "itemId": 3501130,
+    "name": "Corrupt Varsity Prep Wings"
+  },
+  "3501131": {
+    "itemId": 3501131,
+    "name": "Graceful Varsity Prep Wings"
+  },
+  "3501132": {
+    "itemId": 3501132,
+    "name": "Elegant Varsity Prep Wings"
+  },
   "3501133": {
     "itemId": 3501133,
     "name": "Elegant Blossoming Branch Wings"
@@ -58178,6 +59026,58 @@
   "3501138": {
     "itemId": 3501138,
     "name": "Noble Vernal Spirit Wings"
+  },
+  "3501173": {
+    "itemId": 3501173,
+    "name": "Glorious Valkyrie Wings"
+  },
+  "3501174": {
+    "itemId": 3501174,
+    "name": "Innocent Valkyrie Wings"
+  },
+  "3501175": {
+    "itemId": 3501175,
+    "name": "Corrupt Valkyrie Wings"
+  },
+  "3501176": {
+    "itemId": 3501176,
+    "name": "Virtuous Valkyrie Wings"
+  },
+  "3501177": {
+    "itemId": 3501177,
+    "name": "Elegant Valkyrie Wings"
+  },
+  "3501192": {
+    "itemId": 3501192,
+    "name": "Glorious Chantilly Lace Wings"
+  },
+  "3501193": {
+    "itemId": 3501193,
+    "name": "Pure Chantilly Lace Wings"
+  },
+  "3501194": {
+    "itemId": 3501194,
+    "name": "Dazzling Chantilly Lace Wings"
+  },
+  "3501195": {
+    "itemId": 3501195,
+    "name": "Tranquil Chantilly Lace Wings"
+  },
+  "3501196": {
+    "itemId": 3501196,
+    "name": "Glorious Chantilly Lace Chiffon Wings"
+  },
+  "3501197": {
+    "itemId": 3501197,
+    "name": "Dazzling Chantilly Lace Chiffon Wings"
+  },
+  "3501198": {
+    "itemId": 3501198,
+    "name": "Graceful Chantilly Lace Chiffon Wings"
+  },
+  "3501199": {
+    "itemId": 3501199,
+    "name": "Noble Chantilly Lace Chiffon Wings"
   },
   "3590000": {
     "itemId": 3590000,
@@ -60983,6 +61883,30 @@
     "itemId": 40013,
     "name": "@Long Bow"
   },
+  "4001303": {
+    "itemId": 4001303,
+    "name": "Saint's Glory Box"
+  },
+  "4001304": {
+    "itemId": 4001304,
+    "name": "세인트 글로리 손수건"
+  },
+  "4001305": {
+    "itemId": 4001305,
+    "name": "세인트 글로리 손수건 패키지"
+  },
+  "4001306": {
+    "itemId": 4001306,
+    "name": "세인트 글로리 손수건 번들 패키지(11)"
+  },
+  "4001307": {
+    "itemId": 4001307,
+    "name": "세인트 글로리 손수건 번들 패키지(25)"
+  },
+  "4001308": {
+    "itemId": 4001308,
+    "name": "세인트 글로리 손수건 번들 패키지(60)"
+  },
   "4001309": {
     "itemId": 4001309,
     "name": "Badhbh Cath's Might Doll Bag Box"
@@ -61075,6 +61999,30 @@
     "itemId": 4001364,
     "name": "봄의 제전 손수건 번들 패키지(60)"
   },
+  "4001365": {
+    "itemId": 4001365,
+    "name": "Varsity Prep Box"
+  },
+  "4001366": {
+    "itemId": 4001366,
+    "name": "히트 비트 스쿨 손수건"
+  },
+  "4001367": {
+    "itemId": 4001367,
+    "name": "히트 비트 스쿨 손수건 패키지"
+  },
+  "4001368": {
+    "itemId": 4001368,
+    "name": "히트 비트 스쿨 손수건 번들 패키지(11)"
+  },
+  "4001369": {
+    "itemId": 4001369,
+    "name": "히트 비트 스쿨 손수건 번들 패키지(25)"
+  },
+  "4001370": {
+    "itemId": 4001370,
+    "name": "히트 비트 스쿨 손수건 번들 패키지(60)"
+  },
   "4001377": {
     "itemId": 4001377,
     "name": "StepUpTestBox3"
@@ -61082,6 +62030,30 @@
   "4001384": {
     "itemId": 4001384,
     "name": "Doki Doki Pet Box"
+  },
+  "4001386": {
+    "itemId": 4001386,
+    "name": "Horizon Seeker Box"
+  },
+  "4001387": {
+    "itemId": 4001387,
+    "name": "코스모 체이서 손수건"
+  },
+  "4001388": {
+    "itemId": 4001388,
+    "name": "코스모 체이서 손수건 패키지"
+  },
+  "4001389": {
+    "itemId": 4001389,
+    "name": "코스모 체이서 손수건 번들 패키지(11)"
+  },
+  "4001390": {
+    "itemId": 4001390,
+    "name": "코스모 체이서 손수건 번들 패키지(25)"
+  },
+  "4001391": {
+    "itemId": 4001391,
+    "name": "코스모 체이서 손수건 번들 패키지(60)"
   },
   "4001392": {
     "itemId": 4001392,
@@ -61109,7 +62081,7 @@
   },
   "4001410": {
     "itemId": 4001410,
-    "name": "Designer's Memories Box"
+    "name": "미스틱 상자"
   },
   "4001411": {
     "itemId": 4001411,
@@ -61130,6 +62102,54 @@
   "4001415": {
     "itemId": 4001415,
     "name": "미스틱 손수건 번들 패키지(60)"
+  },
+  "4001416": {
+    "itemId": 4001416,
+    "name": "Sainted Valkyrie Box"
+  },
+  "4001417": {
+    "itemId": 4001417,
+    "name": "성역의 발키리 손수건"
+  },
+  "4001418": {
+    "itemId": 4001418,
+    "name": "성역의 발키리 손수건 패키지"
+  },
+  "4001419": {
+    "itemId": 4001419,
+    "name": "성역의 발키리 손수건 번들 패키지(11)"
+  },
+  "4001420": {
+    "itemId": 4001420,
+    "name": "성역의 발키리 손수건 번들 패키지(25)"
+  },
+  "4001421": {
+    "itemId": 4001421,
+    "name": "성역의 발키리 손수건 번들 패키지(60)"
+  },
+  "4001422": {
+    "itemId": 4001422,
+    "name": "Chantilly Lace Box"
+  },
+  "4001423": {
+    "itemId": 4001423,
+    "name": "아리아 실프 손수건"
+  },
+  "4001424": {
+    "itemId": 4001424,
+    "name": "아리아 실프 손수건 패키지"
+  },
+  "4001425": {
+    "itemId": 4001425,
+    "name": "아리아 실프 손수건 번들 패키지(11)"
+  },
+  "4001426": {
+    "itemId": 4001426,
+    "name": "아리아 실프 손수건 번들 패키지(25)"
+  },
+  "4001427": {
+    "itemId": 4001427,
+    "name": "아리아 실프 손수건 번들 패키지(60)"
   },
   "40015": {
     "itemId": 40015,
@@ -65543,6 +66563,22 @@
     "itemId": 4090054,
     "name": "Erinn Merchants' Guild Souvenir Box"
   },
+  "4090074": {
+    "itemId": 4090074,
+    "name": "Erinn Merchants' Guild Totem Box"
+  },
+  "4090075": {
+    "itemId": 4090075,
+    "name": "Erinn Merchants' Guild Golden Weapon Box"
+  },
+  "4090076": {
+    "itemId": 4090076,
+    "name": "Erinn Merchants' Guild Souvenir Box"
+  },
+  "4090077": {
+    "itemId": 4090077,
+    "name": "Taillteann Farm Treasure Chest"
+  },
   "4090078": {
     "itemId": 4090078,
     "name": "Forest Ranger Outfit Piece Box"
@@ -65558,6 +66594,22 @@
   "4090081": {
     "itemId": 4090081,
     "name": "Elemental Harmony Outfit Piece Box"
+  },
+  "4090082": {
+    "itemId": 4090082,
+    "name": "Life Association Coin Box"
+  },
+  "4090090": {
+    "itemId": 4090090,
+    "name": "Harvest Festival Outfit Box"
+  },
+  "4090091": {
+    "itemId": 4090091,
+    "name": "Harvest Festival Homestead Decoration Box"
+  },
+  "4090092": {
+    "itemId": 4090092,
+    "name": "Harvest Festival Accoutrement Box"
   },
   "40901": {
     "itemId": 40901,
@@ -67033,23 +68085,23 @@
   },
   "4100474": {
     "itemId": 4100474,
-    "name": "Mysterious Ribbon Bell Cat Tail Box"
+    "name": "신비한 히트 비트 리본과 벨을 곁들인 캣 꼬리 상자"
   },
   "4100475": {
     "itemId": 4100475,
-    "name": "Mysterious Petite Devil Tail Box"
+    "name": "신비한 히트 비트 데빌 꼬리 상자"
   },
   "4100476": {
     "itemId": 4100476,
-    "name": "Mysterious Shark Tail Box"
+    "name": "신비한 히트 비트 샤크 꼬리 상자"
   },
   "4100477": {
     "itemId": 4100477,
-    "name": "Mysterious Spiked Dragon Tail Box"
+    "name": "신비한 히트 비트 스파이크 드래곤 꼬리 상자"
   },
   "4100478": {
     "itemId": 4100478,
-    "name": "Mysterious Heart Charm Tail Box"
+    "name": "신비한 히트 비트 하트 꼬리 상자"
   },
   "4100480": {
     "itemId": 4100480,
@@ -67295,6 +68347,34 @@
     "itemId": 4100641,
     "name": "Freshman Comprehensive Vitality Potion Gift Box"
   },
+  "4100642": {
+    "itemId": 4100642,
+    "name": "신비한 히트 비트 드래곤 꼬리 상자"
+  },
+  "4100643": {
+    "itemId": 4100643,
+    "name": "신비한 네오 히트 비트 드래곤 꼬리 상자"
+  },
+  "4100644": {
+    "itemId": 4100644,
+    "name": "신비한 히트 비트 복실 털 고양이 꼬리 상자"
+  },
+  "4100645": {
+    "itemId": 4100645,
+    "name": "신비한 네오 히트 비트 복실 털 고양이 꼬리 상자"
+  },
+  "4100646": {
+    "itemId": 4100646,
+    "name": "신비한 히트 비트 스파이럴 꼬리 상자"
+  },
+  "4100647": {
+    "itemId": 4100647,
+    "name": "신비한 히트 비트 스파이럴 리본 꼬리 상자"
+  },
+  "4100648": {
+    "itemId": 4100648,
+    "name": "히트 비트 귀\u0026\u0026꼬리 묶음 스페셜 상자"
+  },
   "4100656": {
     "itemId": 4100656,
     "name": "Service Error Compensation Box"
@@ -67306,6 +68386,10 @@
   "41007": {
     "itemId": 41007,
     "name": "장착용 고깃덩어리 (배포금지)"
+  },
+  "4100723": {
+    "itemId": 4100723,
+    "name": "Mabinogi Compensation Box"
   },
   "41008": {
     "itemId": 41008,
@@ -68105,23 +69189,23 @@
   },
   "4110186": {
     "itemId": 4110186,
-    "name": "Mysterious Ribbon Bell Cat Tail (1 Year) Coupon"
+    "name": "히트 비트 리본과 벨을 곁들인 캣 꼬리(1년) 쿠폰"
   },
   "4110187": {
     "itemId": 4110187,
-    "name": "Petite Devil Tail (1 Year) Coupon"
+    "name": "히트 비트 데빌 꼬리(1년) 쿠폰"
   },
   "4110188": {
     "itemId": 4110188,
-    "name": "Shark Tail (1 Year) Coupon"
+    "name": "히트 비트 샤크 꼬리(1년) 쿠폰"
   },
   "4110189": {
     "itemId": 4110189,
-    "name": "Spiked Dragon Tail (1 Year) Coupon"
+    "name": "히트 비트 스파이크 드래곤 꼬리(1년) 쿠폰"
   },
   "4110190": {
     "itemId": 4110190,
-    "name": "Heart Charm Tail (1 Year) Coupon"
+    "name": "히트 비트 하트 꼬리(1년) 쿠폰"
   },
   "4110191": {
     "itemId": 4110191,
@@ -68342,6 +69426,30 @@
   "4110244": {
     "itemId": 4110244,
     "name": "Refined Languhiris Chaser Set (F/Knuckles) Box (Stage 4)"
+  },
+  "4110245": {
+    "itemId": 4110245,
+    "name": "히트 비트 드래곤 꼬리(1년) 쿠폰"
+  },
+  "4110246": {
+    "itemId": 4110246,
+    "name": "네오 히트 비트 드래곤 꼬리(1년) 쿠폰"
+  },
+  "4110247": {
+    "itemId": 4110247,
+    "name": "히트 비트 복실 털 고양이 꼬리(1년) 쿠폰"
+  },
+  "4110248": {
+    "itemId": 4110248,
+    "name": "네오 히트 비트 복실 털 고양이 꼬리(1년) 쿠폰"
+  },
+  "4110249": {
+    "itemId": 4110249,
+    "name": "히트 비트 스파이럴 꼬리(1년) 쿠폰"
+  },
+  "4110250": {
+    "itemId": 4110250,
+    "name": "히트 비트 스파이럴 리본 꼬리(1년) 쿠폰"
   },
   "4110253": {
     "itemId": 4110253,
@@ -69298,6 +70406,10 @@
   "4130012": {
     "itemId": 4130012,
     "name": "Together with Pinkie and Katell 2nd Title Coupon"
+  },
+  "4130013": {
+    "itemId": 4130013,
+    "name": "Correspondent Nao 2nd Title Coupon"
   },
   "4130014": {
     "itemId": 4130014,
@@ -70271,6 +71383,14 @@
     "itemId": 4130311,
     "name": "16th Anniversary Fantasy Star 2nd Title Coupon"
   },
+  "4130319": {
+    "itemId": 4130319,
+    "name": "Special Luminous Cosmic Milky Way 2nd Title Coupon (Not tradable)"
+  },
+  "4130320": {
+    "itemId": 4130320,
+    "name": "Special Brilliant Cosmic Milky Way 2nd Title Coupon (Not tradable)"
+  },
   "4130321": {
     "itemId": 4130321,
     "name": "Seraphic Grace 2nd Title Coupon"
@@ -70310,6 +71430,10 @@
   "4130340": {
     "itemId": 4130340,
     "name": "Dreaming Gyre 2nd Title Coupon"
+  },
+  "4130342": {
+    "itemId": 4130342,
+    "name": "Nostalgic 8-Biticon 2nd Title Coupon"
   },
   "4130344": {
     "itemId": 4130344,
@@ -70871,6 +71995,22 @@
     "itemId": 4130571,
     "name": "Midir the Lost 2nd Title Coupon"
   },
+  "4130573": {
+    "itemId": 4130573,
+    "name": "The Farm Owner 1st Title Coupon"
+  },
+  "4130574": {
+    "itemId": 4130574,
+    "name": "The Sweaty 1st Title Coupon"
+  },
+  "4130575": {
+    "itemId": 4130575,
+    "name": "The Promising Sprout 1st Title Coupon"
+  },
+  "4130576": {
+    "itemId": 4130576,
+    "name": "The Finest 1st Title Coupon"
+  },
   "4130582": {
     "itemId": 4130582,
     "name": "The Remorseless Title Coupon"
@@ -70915,33 +72055,49 @@
     "itemId": 4130609,
     "name": "Who Rested by the Fire with the GMs 18th Anniversary Title Coupon"
   },
+  "4130610": {
+    "itemId": 4130610,
+    "name": "Anxious Sweat 2nd Title Coupon"
+  },
+  "4130611": {
+    "itemId": 4130611,
+    "name": "Nervous Sweat 2nd Title Coupon"
+  },
+  "4130612": {
+    "itemId": 4130612,
+    "name": "Breathless Sweat 2nd Title Coupon"
+  },
+  "4130613": {
+    "itemId": 4130613,
+    "name": "Flustered Sweat 2nd Title Coupon"
+  },
   "4130620": {
     "itemId": 4130620,
     "name": "Floral Waltz 2nd Title Coupon"
   },
   "4130623": {
     "itemId": 4130623,
-    "name": "Cosmo White Pixels 2nd Title Coupon"
+    "name": "White Pixel Pop 2nd Title Coupon"
   },
   "4130624": {
     "itemId": 4130624,
-    "name": "Cosmo Pink Pixels 2nd Title Coupon"
+    "name": "Pink Pixel Pop 2nd Title Coupon"
   },
   "4130625": {
     "itemId": 4130625,
-    "name": "Cosmo Green Pixels 2nd Title Coupon"
+    "name": "Green Pixel Pop 2nd Title Coupon"
   },
   "4130626": {
     "itemId": 4130626,
-    "name": "Cosmo Blue Pixels 2nd Title Coupon"
+    "name": "Blue Pixel Pop 2nd Title Coupon"
   },
   "4130627": {
     "itemId": 4130627,
-    "name": "Cosmo Yellow Pixels 2nd Title Coupon"
+    "name": "Yellow Pixel Pop 2nd Title Coupon"
   },
   "4130628": {
     "itemId": 4130628,
-    "name": "Cosmo Black Pixels 2nd Title Coupon"
+    "name": "Black Pixel Pop 2nd Title Coupon"
   },
   "4130632": {
     "itemId": 4130632,
@@ -71238,6 +72394,10 @@
   "4130731": {
     "itemId": 4130731,
     "name": "Magical Spotlight 2nd Title Coupon (Not tradable)"
+  },
+  "4130755": {
+    "itemId": 4130755,
+    "name": "Erinn Adventure Pass Season 5 Conqueror 2nd Title Coupon"
   },
   "41308": {
     "itemId": 41308,
@@ -74163,6 +75323,10 @@
     "itemId": 4200215,
     "name": "Dark Diviner Level 50 Elixir"
   },
+  "4200216": {
+    "itemId": 4200216,
+    "name": "Blessed Craftwork: Cairbre's Bugle"
+  },
   "4200217": {
     "itemId": 4200217,
     "name": "Elemental Knight Level 10 Elixir"
@@ -74178,6 +75342,18 @@
   "4200220": {
     "itemId": 4200220,
     "name": "Dark Diviner Level 20 Elixir"
+  },
+  "4200221": {
+    "itemId": 4200221,
+    "name": "Taillteann Farm Energy Orb (1)"
+  },
+  "4200222": {
+    "itemId": 4200222,
+    "name": "Taillteann Farm Energy Orb (10)"
+  },
+  "4200223": {
+    "itemId": 4200223,
+    "name": "Taillteann Farm Energy Orb (100)"
   },
   "4200225": {
     "itemId": 4200225,
@@ -74231,6 +75407,10 @@
     "itemId": 4200237,
     "name": "Box of Portraits"
   },
+  "4200238": {
+    "itemId": 4200238,
+    "name": "Glowing Intertwined Thread"
+  },
   "4200239": {
     "itemId": 4200239,
     "name": "Photostatic Imager"
@@ -74239,9 +75419,29 @@
     "itemId": 4200240,
     "name": "Adelia's Second Record"
   },
+  "4200242": {
+    "itemId": 4200242,
+    "name": "Taillteann Farm Bountiful Fertilizer (10)"
+  },
+  "4200243": {
+    "itemId": 4200243,
+    "name": "Taillteann Farm Bountiful Fertilizer (100)"
+  },
+  "4200245": {
+    "itemId": 4200245,
+    "name": "Taillteann Farm Energy Orb (10)"
+  },
+  "4200246": {
+    "itemId": 4200246,
+    "name": "Taillteann Farm Energy Orb (100)"
+  },
   "4200247": {
     "itemId": 4200247,
     "name": "Swept Off Their Feet Fixed Dye Ampoule Set"
+  },
+  "4200248": {
+    "itemId": 4200248,
+    "name": "Blue Wings of a Goddess (Crom Bas Entrance)"
   },
   "4200252": {
     "itemId": 4200252,
@@ -77739,6 +78939,10 @@
     "itemId": 4300971,
     "name": "Thunder Effect Change Card (Destructive Lightning) Coupon"
   },
+  "4300972": {
+    "itemId": 4300972,
+    "name": "Special Upgrade Increase Scroll"
+  },
   "4300973": {
     "itemId": 4300973,
     "name": "Erg Unlock Scroll"
@@ -78499,6 +79703,10 @@
     "itemId": 4301255,
     "name": "Primal Spirit Stone (Level 100)"
   },
+  "4301256": {
+    "itemId": 4301256,
+    "name": "Technique: Redoubled Offensive Appearance Change Card (Angel of Judgment) Coupon"
+  },
   "4301262": {
     "itemId": 4301262,
     "name": "Rage Impact Effect Change Card (Eruption) Coupon"
@@ -78571,9 +79779,33 @@
     "itemId": 4301299,
     "name": "Dark Diviner Link Level 10 Unlock Box"
   },
+  "4301303": {
+    "itemId": 4301303,
+    "name": "Thunder Effect Change Card (Divine Punishment) Coupon"
+  },
+  "4301304": {
+    "itemId": 4301304,
+    "name": "Death Mark Effect Change Card (Mark of Judgment) Coupon"
+  },
+  "4301305": {
+    "itemId": 4301305,
+    "name": "March Song Effect Change Card (Consecration) Coupon"
+  },
   "4301309": {
     "itemId": 4301309,
     "name": "New Life Commemorative Utility Bag (8x10) Coupon"
+  },
+  "4301310": {
+    "itemId": 4301310,
+    "name": "Thunder Effect Change Card (Divine Punishment) Coupon"
+  },
+  "4301311": {
+    "itemId": 4301311,
+    "name": "Death Mark Effect Change Card (Mark of Judgment) Coupon"
+  },
+  "4301312": {
+    "itemId": 4301312,
+    "name": "March Song Effect Change Card (Consecration) Coupon"
   },
   "4301313": {
     "itemId": 4301313,
@@ -78619,9 +79851,29 @@
     "itemId": 4301338,
     "name": "Homestead Model Town with Scented Bear Coupon"
   },
+  "4301354": {
+    "itemId": 4301354,
+    "name": "Matthias's Beard (Facewear) Box"
+  },
   "4301358": {
     "itemId": 4301358,
     "name": "Lumina Star Cap Coupon"
+  },
+  "4301361": {
+    "itemId": 4301361,
+    "name": "Special Growth Box"
+  },
+  "4301362": {
+    "itemId": 4301362,
+    "name": "Phaea's Tailoring Kit Box"
+  },
+  "4301363": {
+    "itemId": 4301363,
+    "name": "Pan's Premium Box No. 1"
+  },
+  "4301364": {
+    "itemId": 4301364,
+    "name": "Pan's Premium Box No. 3"
   },
   "4301378": {
     "itemId": 4301378,
@@ -78731,6 +79983,10 @@
     "itemId": 4301440,
     "name": "Fireball Effect Change Card (Pure Conflagration) Coupon"
   },
+  "4301457": {
+    "itemId": 4301457,
+    "name": "Special Upgrade Increase Scroll (Not tradable)"
+  },
   "4301469": {
     "itemId": 4301469,
     "name": "Prestige Pet Exclusive Supplement"
@@ -78750,6 +80006,114 @@
   "4301473": {
     "itemId": 4301473,
     "name": "Rank A Lv. 45 Erg Infusion Catalyst"
+  },
+  "4301494": {
+    "itemId": 4301494,
+    "name": "Taillteann Farm Event Notification"
+  },
+  "4301495": {
+    "itemId": 4301495,
+    "name": "행진곡 이펙트 변경 카드(오로라 프림로즈) 쿠폰"
+  },
+  "4301496": {
+    "itemId": 4301496,
+    "name": "행진곡 이펙트 변경 카드(블라썸 프림로즈) 쿠폰"
+  },
+  "4301497": {
+    "itemId": 4301497,
+    "name": "행진곡 이펙트 변경 카드(아쿠아 프림로즈) 쿠폰"
+  },
+  "4301498": {
+    "itemId": 4301498,
+    "name": "행진곡 이펙트 변경 카드(루미너스 프림로즈) 쿠폰"
+  },
+  "4301499": {
+    "itemId": 4301499,
+    "name": "7막: 광란의 질주 이펙트 변경 카드(오로라 스텔라) 쿠폰"
+  },
+  "4301500": {
+    "itemId": 4301500,
+    "name": "7막: 광란의 질주 이펙트 변경 카드(로제 스텔라) 쿠폰"
+  },
+  "4301501": {
+    "itemId": 4301501,
+    "name": "7막: 광란의 질주 이펙트 변경 카드(아쿠아 스텔라) 쿠폰"
+  },
+  "4301502": {
+    "itemId": 4301502,
+    "name": "7막: 광란의 질주 이펙트 변경 카드(루멘 스텔라) 쿠폰"
+  },
+  "4301503": {
+    "itemId": 4301503,
+    "name": "March Song Effect Change Card (Aurora Primrose) Coupon (Not tradable)"
+  },
+  "4301504": {
+    "itemId": 4301504,
+    "name": "March Song Effect Change Card (Blossom Primrose) Coupon (Not tradable)"
+  },
+  "4301505": {
+    "itemId": 4301505,
+    "name": "March Song Effect Change Card (Aqua Primrose) Coupon (Not tradable)"
+  },
+  "4301506": {
+    "itemId": 4301506,
+    "name": "March Song Effect Change Card (Luminous Primrose) Coupon (Not tradable)"
+  },
+  "4301507": {
+    "itemId": 4301507,
+    "name": "Act 7: Climactic Crash Effect Change Card (Aurora Stella) Coupon (Not tradable)"
+  },
+  "4301508": {
+    "itemId": 4301508,
+    "name": "Act 7: Climactic Crash Effect Change Card (Rose Stella) Coupon (Not tradable)"
+  },
+  "4301509": {
+    "itemId": 4301509,
+    "name": "Act 7: Climactic Crash Effect Change Card (Aqua Stella) Coupon (Not tradable)"
+  },
+  "4301510": {
+    "itemId": 4301510,
+    "name": "Act 7: Climactic Crash Effect Change Card (Lumen Stella) Coupon (Not tradable)"
+  },
+  "4301519": {
+    "itemId": 4301519,
+    "name": "Bash Effect Change Card (Eternal Space) Coupon (Not tradable)"
+  },
+  "4301520": {
+    "itemId": 4301520,
+    "name": "Bash Effect Change Card (Infinite Space) Coupon (Not tradable)"
+  },
+  "4301521": {
+    "itemId": 4301521,
+    "name": "Forgotten Tomb Key Exchange Ticket (2026)"
+  },
+  "4301522": {
+    "itemId": 4301522,
+    "name": "Forgotten Tomb Special Key Exchange Ticket (2026)"
+  },
+  "4301523": {
+    "itemId": 4301523,
+    "name": "Forgotten Tomb Key Exchange Ticket (Event) (2026)"
+  },
+  "4301524": {
+    "itemId": 4301524,
+    "name": "Forgotten Tomb Key Exchange Ticket Package (2026)"
+  },
+  "4301530": {
+    "itemId": 4301530,
+    "name": "Saint's Glory Outfit Box"
+  },
+  "4301531": {
+    "itemId": 4301531,
+    "name": "Saint's Glory Handwear Box"
+  },
+  "4301532": {
+    "itemId": 4301532,
+    "name": "Saint's Glory Footwear Box"
+  },
+  "4301533": {
+    "itemId": 4301533,
+    "name": "Saint's Glory Headwear Box"
   },
   "4400002": {
     "itemId": 4400002,
@@ -80203,6 +81567,10 @@
     "itemId": 4400519,
     "name": "Fairy Dragon Selection Box"
   },
+  "4400521": {
+    "itemId": 4400521,
+    "name": "Age Potion Selection Box (Not tradable)"
+  },
   "4400522": {
     "itemId": 4400522,
     "name": "New Life Pet Selection Box"
@@ -80327,6 +81695,26 @@
     "itemId": 4400567,
     "name": "Keeper of Secrets Weapon Appearance Scroll Selection Box"
   },
+  "4400574": {
+    "itemId": 4400574,
+    "name": "Matthias's Boots Selection Box"
+  },
+  "4400575": {
+    "itemId": 4400575,
+    "name": "Matthias's Gloves Selection Box"
+  },
+  "4400576": {
+    "itemId": 4400576,
+    "name": "Matthias's Outfit Selection Box"
+  },
+  "4400577": {
+    "itemId": 4400577,
+    "name": "Matthias's Wig Selection Box"
+  },
+  "4400579": {
+    "itemId": 4400579,
+    "name": "Pan's Support Selection Box"
+  },
   "4400582": {
     "itemId": 4400582,
     "name": "Special Festive Eastern Outfit Selection Box"
@@ -80410,6 +81798,22 @@
   "4400601": {
     "itemId": 4400601,
     "name": "Forget-me-not Blossom Brooch Selection Box (Melodic Puppeteer)"
+  },
+  "4400602": {
+    "itemId": 4400602,
+    "name": "Arcana Attendance Shoes Selection Box"
+  },
+  "4400603": {
+    "itemId": 4400603,
+    "name": "Arcana Attendance Gloves Selection Box"
+  },
+  "4400604": {
+    "itemId": 4400604,
+    "name": "Arcana Attendance Hat Selection Box"
+  },
+  "4400605": {
+    "itemId": 4400605,
+    "name": "Arcana Attendance Outfit Selection Box"
   },
   "4400606": {
     "itemId": 4400606,
@@ -80550,6 +81954,18 @@
   "44007": {
     "itemId": 44007,
     "name": "Cadoc's Fish (Not to be Distributed)"
+  },
+  "4400706": {
+    "itemId": 4400706,
+    "name": "Any Pass Selection Box"
+  },
+  "4400707": {
+    "itemId": 4400707,
+    "name": "Saint's Glory Halo Selection Box"
+  },
+  "4400723": {
+    "itemId": 4400723,
+    "name": "Age Potion Selection Box"
   },
   "44008": {
     "itemId": 44008,
@@ -83327,6 +84743,14 @@
     "itemId": 5000295,
     "name": "Partner Age Potion - Age 19"
   },
+  "5000297": {
+    "itemId": 5000297,
+    "name": "Enchant Great Success Scroll"
+  },
+  "5000298": {
+    "itemId": 5000298,
+    "name": "Enchant Stat Increase Scroll"
+  },
   "50003": {
     "itemId": 50003,
     "name": "Apple"
@@ -83349,7 +84773,7 @@
   },
   "5000305": {
     "itemId": 5000305,
-    "name": "Enchant Stat Increase Scroll"
+    "name": "Enchant Stat Increase Scroll (Not tradable)"
   },
   "5000306": {
     "itemId": 5000306,
@@ -83391,6 +84815,18 @@
     "itemId": 5000316,
     "name": "Age Potion - Age 20 (Not tradable)"
   },
+  "5000317": {
+    "itemId": 5000317,
+    "name": "Food Preservative"
+  },
+  "5000318": {
+    "itemId": 5000318,
+    "name": "Lumen Syrup"
+  },
+  "5000319": {
+    "itemId": 5000319,
+    "name": "Commerce Expansion Cover"
+  },
   "5000321": {
     "itemId": 5000321,
     "name": "Music Buff Potion (30 min.)"
@@ -83410,6 +84846,14 @@
   "5000325": {
     "itemId": 5000325,
     "name": "Light Attack Delay Reduction Potion (2 hrs.)"
+  },
+  "5000335": {
+    "itemId": 5000335,
+    "name": "Rarefied Holy Water of Lymilark"
+  },
+  "5000347": {
+    "itemId": 5000347,
+    "name": "Age Potion - Age 20"
   },
   "5000348": {
     "itemId": 5000348,
@@ -83446,6 +84890,14 @@
   "5000361": {
     "itemId": 5000361,
     "name": "Intermediate Sequel Figure Movement Speed Boost Potion"
+  },
+  "5000365": {
+    "itemId": 5000365,
+    "name": "Enchant Failure Prevention Scroll (Not tradable)"
+  },
+  "5000366": {
+    "itemId": 5000366,
+    "name": "Enchant Great Success Scroll (Not tradable)"
   },
   "50004": {
     "itemId": 50004,
@@ -84111,6 +85563,14 @@
     "itemId": 5010067,
     "name": "Grilled Scallop with Cheese"
   },
+  "5010078": {
+    "itemId": 5010078,
+    "name": "Cherry Tomato"
+  },
+  "5010079": {
+    "itemId": 5010079,
+    "name": "Shiitake Mushroom"
+  },
   "5010089": {
     "itemId": 5010089,
     "name": "Yuri's Handmade Chocolate"
@@ -84298,6 +85758,10 @@
   "5010156": {
     "itemId": 5010156,
     "name": "Explorer's Poisonous Mushroom Stew"
+  },
+  "5010184": {
+    "itemId": 5010184,
+    "name": "Physique-Preserving Mushroom Stew"
   },
   "5010185": {
     "itemId": 5010185,
@@ -85082,6 +86546,10 @@
   "5020109": {
     "itemId": 5020109,
     "name": "Moon Bunny Flora Whistle"
+  },
+  "5020110": {
+    "itemId": 5020110,
+    "name": "Blocky Bubby Whistle"
   },
   "5020111": {
     "itemId": 5020111,
@@ -87467,6 +88935,18 @@
     "itemId": 5030445,
     "name": "Homestead Merchant Caravan Stall (Sundries)"
   },
+  "5030446": {
+    "itemId": 5030446,
+    "name": "Homestead Ret Miniature"
+  },
+  "5030447": {
+    "itemId": 5030447,
+    "name": "Homestead Tro Miniature"
+  },
+  "5030448": {
+    "itemId": 5030448,
+    "name": "Homestead Unavoidable Showdown Panel"
+  },
   "5030449": {
     "itemId": 5030449,
     "name": "Homestead Lazy Purrling Figure"
@@ -88246,6 +89726,30 @@
   "5030668": {
     "itemId": 5030668,
     "name": "Homestead Bri Leith Gate Sequel Figure"
+  },
+  "5030690": {
+    "itemId": 5030690,
+    "name": "Homestead Wagon"
+  },
+  "5030691": {
+    "itemId": 5030691,
+    "name": "Homestead Pack Elephant"
+  },
+  "5030692": {
+    "itemId": 5030692,
+    "name": "Homestead Dog Sled"
+  },
+  "5030693": {
+    "itemId": 5030693,
+    "name": "Homestead Camel"
+  },
+  "5030694": {
+    "itemId": 5030694,
+    "name": "Homestead Trader's Skiff"
+  },
+  "5030695": {
+    "itemId": 5030695,
+    "name": "Homestead Matthias Portrait Easel"
   },
   "5030697": {
     "itemId": 5030697,
@@ -89218,6 +90722,30 @@
   "5040130": {
     "itemId": 5040130,
     "name": "Incubus King's Chain Blade Appearance Scroll"
+  },
+  "5040131": {
+    "itemId": 5040131,
+    "name": "Legendary Pixel Hammer Appearance Scroll"
+  },
+  "5040132": {
+    "itemId": 5040132,
+    "name": "Legendary Pixel Bow Appearance Scroll"
+  },
+  "5040133": {
+    "itemId": 5040133,
+    "name": "Legendary Pixel Staff Appearance Scroll"
+  },
+  "5040135": {
+    "itemId": 5040135,
+    "name": "Legendary Pixel Shield Appearance Scroll"
+  },
+  "5040136": {
+    "itemId": 5040136,
+    "name": "Legendary Pixel Soluna Blade Appearance Scroll (Two-handed Sword)"
+  },
+  "5040137": {
+    "itemId": 5040137,
+    "name": "Legendary Pixel Soluna Blade Appearance Scroll (One-handed Sword)"
   },
   "5040138": {
     "itemId": 5040138,
@@ -90262,6 +91790,22 @@
   "5040443": {
     "itemId": 5040443,
     "name": "Worldwide Wanderer Chain Blade Appearance Scroll"
+  },
+  "5040444": {
+    "itemId": 5040444,
+    "name": "Legendary Pixel Control Bar Appearance Scroll"
+  },
+  "5040445": {
+    "itemId": 5040445,
+    "name": "Legendary Pixel Knuckles Appearance Scroll"
+  },
+  "5040446": {
+    "itemId": 5040446,
+    "name": "Legendary Pixel Dual Guns Appearance Scroll"
+  },
+  "5040447": {
+    "itemId": 5040447,
+    "name": "Legendary Pixel Shuriken Appearance Scroll"
   },
   "5040448": {
     "itemId": 5040448,
@@ -91379,6 +92923,10 @@
     "itemId": 5040932,
     "name": "Romantic Eastern Lantern Stardust"
   },
+  "5040935": {
+    "itemId": 5040935,
+    "name": "Phaea's Golden Tailoring Kit"
+  },
   "5040936": {
     "itemId": 5040936,
     "name": "Phaea's Tailoring Kit"
@@ -91543,9 +93091,149 @@
     "itemId": 5040987,
     "name": "Winter Snowbell Mandolin Appearance Scroll"
   },
+  "5040988": {
+    "itemId": 5040988,
+    "name": "Seasoning Powder (Taillteann Farm)"
+  },
+  "5040989": {
+    "itemId": 5040989,
+    "name": "Blackberry Seeds (Taillteann Farm)"
+  },
+  "5040990": {
+    "itemId": 5040990,
+    "name": "Okra Seeds (Taillteann Farm)"
+  },
+  "5040991": {
+    "itemId": 5040991,
+    "name": "Jasmine Seeds (Taillteann Farm)"
+  },
+  "5040992": {
+    "itemId": 5040992,
+    "name": "Red Pear Tree Nutrients (Taillteann Farm)"
+  },
+  "5040993": {
+    "itemId": 5040993,
+    "name": "Rubber Tree Nutrients (Taillteann Farm)"
+  },
+  "5040994": {
+    "itemId": 5040994,
+    "name": "Spider Nutrients (Taillteann Farm)"
+  },
+  "5040995": {
+    "itemId": 5040995,
+    "name": "Quartz Nutrients (Taillteann Farm)"
+  },
+  "5040996": {
+    "itemId": 5040996,
+    "name": "Common Blackberry (Taillteann Farm)"
+  },
+  "5040997": {
+    "itemId": 5040997,
+    "name": "Common Okra (Taillteann Farm)"
+  },
+  "5040998": {
+    "itemId": 5040998,
+    "name": "Common Jasmine (Taillteann Farm)"
+  },
+  "5040999": {
+    "itemId": 5040999,
+    "name": "Common Red Pear (Taillteann Farm)"
+  },
   "50410": {
     "itemId": 50410,
     "name": "Cabbage Seeds"
+  },
+  "5041000": {
+    "itemId": 5041000,
+    "name": "Common Rubber (Taillteann Farm)"
+  },
+  "5041001": {
+    "itemId": 5041001,
+    "name": "Common Magic Cobweb (Taillteann Farm)"
+  },
+  "5041002": {
+    "itemId": 5041002,
+    "name": "Common Quartz (Taillteann Farm)"
+  },
+  "5041003": {
+    "itemId": 5041003,
+    "name": "Blackberry Juice (Taillteann Farm)"
+  },
+  "5041004": {
+    "itemId": 5041004,
+    "name": "Sweet Cake (Taillteann Farm)"
+  },
+  "5041005": {
+    "itemId": 5041005,
+    "name": "Red Pear Jam (Taillteann Farm)"
+  },
+  "5041006": {
+    "itemId": 5041006,
+    "name": "Starry Salad (Taillteann Farm)"
+  },
+  "5041007": {
+    "itemId": 5041007,
+    "name": "Jasmine Perfume (Taillteann Farm)"
+  },
+  "5041008": {
+    "itemId": 5041008,
+    "name": "Purple Fabric (Taillteann Farm)"
+  },
+  "5041009": {
+    "itemId": 5041009,
+    "name": "Floral Dress (Taillteann Farm)"
+  },
+  "5041010": {
+    "itemId": 5041010,
+    "name": "Waterproof Fabric (Taillteann Farm)"
+  },
+  "5041011": {
+    "itemId": 5041011,
+    "name": "Reinforced Fiber (Taillteann Farm)"
+  },
+  "5041012": {
+    "itemId": 5041012,
+    "name": "Evening Dress (Taillteann Farm)"
+  },
+  "5041013": {
+    "itemId": 5041013,
+    "name": "Red Moon Earrings (Taillteann Farm)"
+  },
+  "5041014": {
+    "itemId": 5041014,
+    "name": "Pure Blossom Hairpin (Taillteann Farm)"
+  },
+  "5041015": {
+    "itemId": 5041015,
+    "name": "Quartz Powder (Taillteann Farm)"
+  },
+  "5041016": {
+    "itemId": 5041016,
+    "name": "Midnight Pearl Paint (Taillteann Farm)"
+  },
+  "5041017": {
+    "itemId": 5041017,
+    "name": "Decorative Crystal Sword (Taillteann Farm)"
+  },
+  "5041018": {
+    "itemId": 5041018,
+    "name": "Power Glue (Taillteann Farm)"
+  },
+  "5041019": {
+    "itemId": 5041019,
+    "name": "Natural Rubber (Taillteann Farm)"
+  },
+  "5041020": {
+    "itemId": 5041020,
+    "name": "Pressed Flower Craft Box (Taillteann Farm)"
+  },
+  "5041021": {
+    "itemId": 5041021,
+    "name": "Twilight Lute (Taillteann Farm)"
+  },
+  "5041022": {
+    "itemId": 5041022,
+    "name": "Dawn Bow (Taillteann Farm)"
   },
   "5041025": {
     "itemId": 5041025,
@@ -91563,13 +93251,125 @@
     "itemId": 5041028,
     "name": "Oblivion Kaiser Halberd Appearance Scroll"
   },
+  "5041029": {
+    "itemId": 5041029,
+    "name": "Fine Blackberry (Taillteann Farm)"
+  },
+  "5041030": {
+    "itemId": 5041030,
+    "name": "Fine Okra (Taillteann Farm)"
+  },
+  "5041031": {
+    "itemId": 5041031,
+    "name": "Fine Jasmine (Taillteann Farm)"
+  },
+  "5041032": {
+    "itemId": 5041032,
+    "name": "Fine Red Pear (Taillteann Farm)"
+  },
+  "5041033": {
+    "itemId": 5041033,
+    "name": "Fine Rubber (Taillteann Farm)"
+  },
+  "5041034": {
+    "itemId": 5041034,
+    "name": "Fine Magic Cobweb (Taillteann Farm)"
+  },
+  "5041035": {
+    "itemId": 5041035,
+    "name": "Fine Quartz (Taillteann Farm)"
+  },
+  "5041036": {
+    "itemId": 5041036,
+    "name": "Finest Blackberry (Taillteann Farm)"
+  },
+  "5041037": {
+    "itemId": 5041037,
+    "name": "Finest Okra (Taillteann Farm)"
+  },
+  "5041038": {
+    "itemId": 5041038,
+    "name": "Finest Jasmine (Taillteann Farm)"
+  },
+  "5041039": {
+    "itemId": 5041039,
+    "name": "Finest Red Pear (Taillteann Farm)"
+  },
+  "5041040": {
+    "itemId": 5041040,
+    "name": "Finest Rubber (Taillteann Farm)"
+  },
+  "5041041": {
+    "itemId": 5041041,
+    "name": "Finest Magic Cobweb (Taillteann Farm)"
+  },
+  "5041042": {
+    "itemId": 5041042,
+    "name": "Finest Quartz (Taillteann Farm)"
+  },
+  "5041043": {
+    "itemId": 5041043,
+    "name": "Life Association Key"
+  },
+  "5041044": {
+    "itemId": 5041044,
+    "name": "Taillteann Farm Storage Upgrade Brick"
+  },
+  "5041045": {
+    "itemId": 5041045,
+    "name": "Taillteann Farm Storage Upgrade Iron Plate"
+  },
+  "5041046": {
+    "itemId": 5041046,
+    "name": "Taillteann Farm Storage Upgrade Paint"
+  },
+  "5041047": {
+    "itemId": 5041047,
+    "name": "Taillteann Farm Storage Upgrade Glass"
+  },
   "5041048": {
     "itemId": 5041048,
     "name": "Primitive Stone Axe (Axe) Appearance Scroll"
   },
+  "5041049": {
+    "itemId": 5041049,
+    "name": "Golden Sword Appearance Scroll"
+  },
+  "5041050": {
+    "itemId": 5041050,
+    "name": "Golden Blade Appearance Scroll"
+  },
+  "5041051": {
+    "itemId": 5041051,
+    "name": "Golden Bow Appearance Scroll"
+  },
+  "5041052": {
+    "itemId": 5041052,
+    "name": "Golden Staff Appearance Scroll"
+  },
+  "5041053": {
+    "itemId": 5041053,
+    "name": "Golden Dual Gun Appearance Scroll"
+  },
+  "5041054": {
+    "itemId": 5041054,
+    "name": "Taillteann Farm Lughnasadh Season 1 Storage Skin"
+  },
+  "5041055": {
+    "itemId": 5041055,
+    "name": "Taillteann Farm Lughnasadh Season 1 Signpost Skin"
+  },
+  "5041056": {
+    "itemId": 5041056,
+    "name": "Taillteann Farm Lughnasadh Season 1 Fence Skin"
+  },
   "5041057": {
     "itemId": 5041057,
     "name": "Holy Water of Murias Memory Scroll"
+  },
+  "5041058": {
+    "itemId": 5041058,
+    "name": "Ducat Pouch"
   },
   "5041069": {
     "itemId": 5041069,
@@ -91578,6 +93378,26 @@
   "5041070": {
     "itemId": 5041070,
     "name": "Taiyaki Doll Appearance Scroll"
+  },
+  "5041071": {
+    "itemId": 5041071,
+    "name": "Commerce Floating Stone (1 hr.)"
+  },
+  "5041072": {
+    "itemId": 5041072,
+    "name": "Taillteann Farm Treasure Gold Coin"
+  },
+  "5041073": {
+    "itemId": 5041073,
+    "name": "Taillteann Farm Treasure Gold Coin"
+  },
+  "5041074": {
+    "itemId": 5041074,
+    "name": "Taillteann Farm Treasure Gold Coin"
+  },
+  "5041075": {
+    "itemId": 5041075,
+    "name": "Taillteann Farm Treasure Gold Coin"
   },
   "5041076": {
     "itemId": 5041076,
@@ -91598,6 +93418,18 @@
   "50411": {
     "itemId": 50411,
     "name": "Tomato Seeds"
+  },
+  "5041104": {
+    "itemId": 5041104,
+    "name": "Spicy Fish Stew (Part-Time Job)"
+  },
+  "5041105": {
+    "itemId": 5041105,
+    "name": "Lemon (Part-Time Job)"
+  },
+  "5041106": {
+    "itemId": 5041106,
+    "name": "Orange (Part-Time Job)"
   },
   "5041115": {
     "itemId": 5041115,
@@ -91655,6 +93487,10 @@
     "itemId": 5041132,
     "name": "Wasteland Wanderer Blasters Appearance Scroll (Dual Guns)"
   },
+  "5041133": {
+    "itemId": 5041133,
+    "name": "Sugar (Part-Time Job)"
+  },
   "5041134": {
     "itemId": 5041134,
     "name": "Ruins in Twilight Collection Book"
@@ -91667,6 +93503,38 @@
     "itemId": 5041136,
     "name": "Freshman Tumbler Appearance Scroll"
   },
+  "5041137": {
+    "itemId": 5041137,
+    "name": "Varsity Prep Cycling Gloves Appearance Scroll (Knuckles)"
+  },
+  "5041138": {
+    "itemId": 5041138,
+    "name": "Varsity Prep Charming Cycling Gloves Appearance Scroll (Knuckles)"
+  },
+  "5041139": {
+    "itemId": 5041139,
+    "name": "Horizon Seeker Greatsword Appearance Scroll"
+  },
+  "5041140": {
+    "itemId": 5041140,
+    "name": "Horizon Chaser Greatsword Appearance Scroll"
+  },
+  "5041141": {
+    "itemId": 5041141,
+    "name": "Horizon Seeker Twinblade Appearance Scroll (Lance)"
+  },
+  "5041142": {
+    "itemId": 5041142,
+    "name": "Horizon Chaser Twinblade Appearance Scroll (Lance)"
+  },
+  "5041143": {
+    "itemId": 5041143,
+    "name": "Horizon Seeker Cylinder Appearance Scroll"
+  },
+  "5041144": {
+    "itemId": 5041144,
+    "name": "Horizon Chaser Cylinder Appearance Scroll"
+  },
   "5041145": {
     "itemId": 5041145,
     "name": "Spring's Herald One-handed Sword Appearance Scroll"
@@ -91674,6 +93542,54 @@
   "5041146": {
     "itemId": 5041146,
     "name": "Spring's Herald Staff Appearance Scroll"
+  },
+  "5041177": {
+    "itemId": 5041177,
+    "name": "Corrupted Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041178": {
+    "itemId": 5041178,
+    "name": "Pure Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041179": {
+    "itemId": 5041179,
+    "name": "Fancy Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041180": {
+    "itemId": 5041180,
+    "name": "Noble Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041181": {
+    "itemId": 5041181,
+    "name": "Innocent Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041182": {
+    "itemId": 5041182,
+    "name": "Great Horizon Seeker Spectral Tome Appearance Scroll (Spellbook)"
+  },
+  "5041183": {
+    "itemId": 5041183,
+    "name": "Great Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
+  },
+  "5041184": {
+    "itemId": 5041184,
+    "name": "Corrupted Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
+  },
+  "5041185": {
+    "itemId": 5041185,
+    "name": "Pure Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
+  },
+  "5041186": {
+    "itemId": 5041186,
+    "name": "Fancy Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
+  },
+  "5041187": {
+    "itemId": 5041187,
+    "name": "Noble Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
+  },
+  "5041188": {
+    "itemId": 5041188,
+    "name": "Innocent Horizon Seeker Catalytic Crest Appearance Scroll (Guard Cylinder)"
   },
   "5041190": {
     "itemId": 5041190,
@@ -91687,6 +93603,58 @@
     "itemId": 50412,
     "name": "Mystic Turkey"
   },
+  "5041204": {
+    "itemId": 5041204,
+    "name": "Sweet Summer Watermelon Greatsword Appearance Scroll"
+  },
+  "5041209": {
+    "itemId": 5041209,
+    "name": "Noble Einherjar's Valiant Greatsword Appearance Scroll"
+  },
+  "5041210": {
+    "itemId": 5041210,
+    "name": "Sainted Valkyrie's Radiant Greatsword Appearance Scroll"
+  },
+  "5041211": {
+    "itemId": 5041211,
+    "name": "Sainted Valkyrie's Radiant Greatshield Appearance Scroll"
+  },
+  "5041212": {
+    "itemId": 5041212,
+    "name": "Noble Einherjar's Valiant Greatshield Appearance Scroll"
+  },
+  "5041213": {
+    "itemId": 5041213,
+    "name": "Sainted Valkyrie's Radiant Shield Appearance Scroll"
+  },
+  "5041214": {
+    "itemId": 5041214,
+    "name": "Noble Einherjar's Valiant Shield Appearance Scroll"
+  },
+  "5041215": {
+    "itemId": 5041215,
+    "name": "Noble Einherjar's Valiant Sword Appearance Scroll"
+  },
+  "5041216": {
+    "itemId": 5041216,
+    "name": "Sainted Valkyrie's Radiant Sword Appearance Scroll"
+  },
+  "5041217": {
+    "itemId": 5041217,
+    "name": "Noble Einherjar's Valiant Lantern Appearance Scroll (Chain Blade)"
+  },
+  "5041218": {
+    "itemId": 5041218,
+    "name": "Sainted Valkyrie's Radiant Lantern Appearance Scroll (Chain Blade)"
+  },
+  "5041219": {
+    "itemId": 5041219,
+    "name": "Noble Einherjar's Valiant Half-Moon Lance Appearance Scroll"
+  },
+  "5041220": {
+    "itemId": 5041220,
+    "name": "Sainted Valkyrie's Radiant Half-Moon Lance Appearance Scroll"
+  },
   "5041230": {
     "itemId": 5041230,
     "name": "Phaea's Golden Tailoring Kit"
@@ -91694,6 +93662,46 @@
   "5041231": {
     "itemId": 5041231,
     "name": "Phaea's Tailoring Kit"
+  },
+  "5041232": {
+    "itemId": 5041232,
+    "name": "Blackberry Seeds (Taillteann Farm)"
+  },
+  "5041233": {
+    "itemId": 5041233,
+    "name": "Okra Seeds (Taillteann Farm)"
+  },
+  "5041234": {
+    "itemId": 5041234,
+    "name": "Jasmine Seeds (Taillteann Farm)"
+  },
+  "5041235": {
+    "itemId": 5041235,
+    "name": "Red Pear Tree Nutrients (Taillteann Farm)"
+  },
+  "5041236": {
+    "itemId": 5041236,
+    "name": "Rubber Tree Nutrients (Taillteann Farm)"
+  },
+  "5041237": {
+    "itemId": 5041237,
+    "name": "Spider Nutrients (Taillteann Farm)"
+  },
+  "5041238": {
+    "itemId": 5041238,
+    "name": "Quartz Nutrients (Taillteann Farm)"
+  },
+  "5041273": {
+    "itemId": 5041273,
+    "name": "Forgotten Tomb Treasure Chest Key (2026)"
+  },
+  "5041274": {
+    "itemId": 5041274,
+    "name": "Forgotten Tomb Special Treasure Chest Key (2026)"
+  },
+  "5041275": {
+    "itemId": 5041275,
+    "name": "Forgotten Tomb Treasure Chest Key (Event) (2026)"
   },
   "50413": {
     "itemId": 50413,
@@ -92119,6 +94127,10 @@
     "itemId": 5050022,
     "name": "Special Blossoming Hope Gem (Event)"
   },
+  "5050023": {
+    "itemId": 5050023,
+    "name": "Gathering Gloves"
+  },
   "5050024": {
     "itemId": 5050024,
     "name": "Standard Atelier Fabric"
@@ -92134,6 +94146,18 @@
   "5050028": {
     "itemId": 5050028,
     "name": "Trendy Atelier Fabric"
+  },
+  "5050030": {
+    "itemId": 5050030,
+    "name": "Seasonal Standard Atelier Fabric"
+  },
+  "5050032": {
+    "itemId": 5050032,
+    "name": "Dazzling Reforging Tool (Not tradable)"
+  },
+  "5050034": {
+    "itemId": 5050034,
+    "name": "Brilliant Reforging Tool (Not tradable)"
   },
   "50501": {
     "itemId": 50501,
@@ -94519,6 +96543,10 @@
     "itemId": 51001,
     "name": "HP 10 Potion"
   },
+  "5100100": {
+    "itemId": 5100100,
+    "name": "Ether Powder"
+  },
   "5100101": {
     "itemId": 5100101,
     "name": "[Warrior] Skill Black Combo Card Fragment"
@@ -95363,17 +97391,185 @@
     "itemId": 5100372,
     "name": "Finest Amplification Catalyst (Event)"
   },
+  "5100377": {
+    "itemId": 5100377,
+    "name": "Roasted Chicken (Part-Time Job)"
+  },
   "5100378": {
     "itemId": 5100378,
     "name": "Mana-Rich Heartwood"
+  },
+  "5100379": {
+    "itemId": 5100379,
+    "name": "Mysterious Feather"
+  },
+  "5100380": {
+    "itemId": 5100380,
+    "name": "Brium Milk"
+  },
+  "5100381": {
+    "itemId": 5100381,
+    "name": "Glowing Wool"
+  },
+  "5100382": {
+    "itemId": 5100382,
+    "name": "Rapids Grain"
+  },
+  "5100383": {
+    "itemId": 5100383,
+    "name": "Moonlight Carrot"
+  },
+  "5100384": {
+    "itemId": 5100384,
+    "name": "Wild Berry"
+  },
+  "5100385": {
+    "itemId": 5100385,
+    "name": "Hillwen Ore Essence"
+  },
+  "5100386": {
+    "itemId": 5100386,
+    "name": "Shyllien Condensed Core"
+  },
+  "5100387": {
+    "itemId": 5100387,
+    "name": "Azurite"
+  },
+  "5100388": {
+    "itemId": 5100388,
+    "name": "White Lead Ore"
+  },
+  "5100389": {
+    "itemId": 5100389,
+    "name": "Hematite"
+  },
+  "5100390": {
+    "itemId": 5100390,
+    "name": "Aventurine"
+  },
+  "5100391": {
+    "itemId": 5100391,
+    "name": "Milky Quartz"
+  },
+  "5100392": {
+    "itemId": 5100392,
+    "name": "Carnelian"
+  },
+  "5100393": {
+    "itemId": 5100393,
+    "name": "Devil's Finger Mushroom"
+  },
+  "5100394": {
+    "itemId": 5100394,
+    "name": "Veiled Lady Mushroom"
+  },
+  "5100395": {
+    "itemId": 5100395,
+    "name": "Snow Lotus"
+  },
+  "5100396": {
+    "itemId": 5100396,
+    "name": "Lumen Plant"
   },
   "5100397": {
     "itemId": 5100397,
     "name": "Condensed Strength Fragment: Guard Cylinder"
   },
+  "5100398": {
+    "itemId": 5100398,
+    "name": "Azurite Ingot"
+  },
+  "5100399": {
+    "itemId": 5100399,
+    "name": "Hematite Ingot"
+  },
   "51004": {
     "itemId": 51004,
     "name": "HP 100 Potion"
+  },
+  "5100400": {
+    "itemId": 5100400,
+    "name": "White Lead Ingot"
+  },
+  "5100404": {
+    "itemId": 5100404,
+    "name": "Azurite Plate"
+  },
+  "5100405": {
+    "itemId": 5100405,
+    "name": "Hematite Plate"
+  },
+  "5100406": {
+    "itemId": 5100406,
+    "name": "White Lead Plate"
+  },
+  "5100407": {
+    "itemId": 5100407,
+    "name": "Moonlight Gear"
+  },
+  "5100408": {
+    "itemId": 5100408,
+    "name": "Moonlight Rapids Grain Bread Box"
+  },
+  "5100409": {
+    "itemId": 5100409,
+    "name": "Rare Mushroom Stir Fry Box"
+  },
+  "5100410": {
+    "itemId": 5100410,
+    "name": "Wild Berry Cream Sauce Box"
+  },
+  "5100411": {
+    "itemId": 5100411,
+    "name": "Mana-Rich Heartwood Essence"
+  },
+  "5100412": {
+    "itemId": 5100412,
+    "name": "Compressed Rapids Grain"
+  },
+  "5100413": {
+    "itemId": 5100413,
+    "name": "Processed Moonlight Carrot"
+  },
+  "5100414": {
+    "itemId": 5100414,
+    "name": "Processed Wild Berry"
+  },
+  "5100415": {
+    "itemId": 5100415,
+    "name": "Processed Hillwen Core"
+  },
+  "5100416": {
+    "itemId": 5100416,
+    "name": "Processed Shyllien Core"
+  },
+  "5100417": {
+    "itemId": 5100417,
+    "name": "Polished Aventurine"
+  },
+  "5100418": {
+    "itemId": 5100418,
+    "name": "Polished Milky Quartz"
+  },
+  "5100419": {
+    "itemId": 5100419,
+    "name": "Polished Carnelian"
+  },
+  "5100420": {
+    "itemId": 5100420,
+    "name": "Processed Devil's Finger Mushroom Powder"
+  },
+  "5100421": {
+    "itemId": 5100421,
+    "name": "Processed Veiled Lady Mushroom Powder"
+  },
+  "5100422": {
+    "itemId": 5100422,
+    "name": "Snow Lotus Crystal"
+  },
+  "5100423": {
+    "itemId": 5100423,
+    "name": "Lumen Plant Crystal"
   },
   "5100424": {
     "itemId": 5100424,
@@ -95386,6 +97582,10 @@
   "5100426": {
     "itemId": 5100426,
     "name": "Condensed Strength Fragment: Marionette"
+  },
+  "5100428": {
+    "itemId": 5100428,
+    "name": "Pure Essence"
   },
   "5100429": {
     "itemId": 5100429,
@@ -95426,6 +97626,18 @@
   "5100438": {
     "itemId": 5100438,
     "name": "Ethereal Split Wings Fragment"
+  },
+  "5100439": {
+    "itemId": 5100439,
+    "name": "Dark Erg Crystal (100)"
+  },
+  "5100440": {
+    "itemId": 5100440,
+    "name": "Dark Erg Crystal (300)"
+  },
+  "5100441": {
+    "itemId": 5100441,
+    "name": "Dark Erg Crystal (500)"
   },
   "51005": {
     "itemId": 51005,
@@ -97262,6 +99474,10 @@
   "5120218": {
     "itemId": 5120218,
     "name": "Tech Duinn Mission Pass - Hard (Party of 4)"
+  },
+  "5120226": {
+    "itemId": 5120226,
+    "name": "Crom Bas Abyss Dungeon Pass"
   },
   "51203": {
     "itemId": 51203,
@@ -99651,6 +101867,18 @@
     "itemId": 5160378,
     "name": "Vivace Effect Change Card (Black Floral Confetti)"
   },
+  "5160382": {
+    "itemId": 5160382,
+    "name": "Technique: Redoubled Offensive Appearance Change Card (Angel of Judgment)"
+  },
+  "5160383": {
+    "itemId": 5160383,
+    "name": "Damage Skin - Gold Ingot"
+  },
+  "5160384": {
+    "itemId": 5160384,
+    "name": "Damage Skin - Commerce"
+  },
   "5160386": {
     "itemId": 5160386,
     "name": "Rage Impact Effect Change Card (Eruption)"
@@ -99659,9 +101887,45 @@
     "itemId": 5160387,
     "name": "Bash Effect Change Card (Rampage)"
   },
+  "5160393": {
+    "itemId": 5160393,
+    "name": "Belvast Specialty (All-Stats Totem)"
+  },
+  "5160394": {
+    "itemId": 5160394,
+    "name": "Qilla Specialty (Max Damage Totem)"
+  },
+  "5160395": {
+    "itemId": 5160395,
+    "name": "Filia Specialty (Magic Attack Totem)"
+  },
+  "5160396": {
+    "itemId": 5160396,
+    "name": "Cor Specialty (Critical Totem)"
+  },
+  "5160397": {
+    "itemId": 5160397,
+    "name": "Vales Specialty (Movement Speed Totem)"
+  },
   "51604": {
     "itemId": 51604,
     "name": "Magical Blitz Heart Angelic Halo"
+  },
+  "5160405": {
+    "itemId": 5160405,
+    "name": "Thunder Effect Change Card (Divine Punishment)"
+  },
+  "5160406": {
+    "itemId": 5160406,
+    "name": "Death Mark Effect Change Card (Mark of Judgment)"
+  },
+  "5160407": {
+    "itemId": 5160407,
+    "name": "March Song Effect Change Card (Consecration)"
+  },
+  "5160408": {
+    "itemId": 5160408,
+    "name": "Red Pear Jam Totem (Taillteann Farm Movement Speed Totem)"
   },
   "5160409": {
     "itemId": 5160409,
@@ -99714,6 +101978,38 @@
   "5160433": {
     "itemId": 5160433,
     "name": "Freshman Study Charm"
+  },
+  "5160493": {
+    "itemId": 5160493,
+    "name": "March Song Effect Change Card (Aurora Primrose)"
+  },
+  "5160494": {
+    "itemId": 5160494,
+    "name": "March Song Effect Change Card (Blossom Primrose)"
+  },
+  "5160495": {
+    "itemId": 5160495,
+    "name": "March Song Effect Change Card (Aqua Primrose)"
+  },
+  "5160496": {
+    "itemId": 5160496,
+    "name": "March Song Effect Change Card (Luminous Primrose)"
+  },
+  "5160497": {
+    "itemId": 5160497,
+    "name": "Act 7: Climactic Crash Effect Change Card (Aurora Stella)"
+  },
+  "5160498": {
+    "itemId": 5160498,
+    "name": "Act 7: Climactic Crash Effect Change Card (Rose Stella)"
+  },
+  "5160499": {
+    "itemId": 5160499,
+    "name": "Act 7: Climactic Crash Effect Change Card (Aqua Stella)"
+  },
+  "5160500": {
+    "itemId": 5160500,
+    "name": "Act 7: Climactic Crash Effect Change Card (Lumen Stella)"
   },
   "5170000": {
     "itemId": 5170000,
@@ -101039,6 +103335,18 @@
     "itemId": 5170430,
     "name": "Spirit Transformation Liqueur (Abyssal Blizzard)"
   },
+  "5170431": {
+    "itemId": 5170431,
+    "name": "Ducat"
+  },
+  "5170436": {
+    "itemId": 5170436,
+    "name": "Spirit Transformation Liqueur (Golden Pig)"
+  },
+  "5170437": {
+    "itemId": 5170437,
+    "name": "Spirit Transformation Liqueur (Gem Party)"
+  },
   "5170440": {
     "itemId": 5170440,
     "name": "Spirit Transformation Liqueur (Crochet Ball)"
@@ -101046,6 +103354,30 @@
   "5170441": {
     "itemId": 5170441,
     "name": "Spirit Transformation Liqueur (Starlight)"
+  },
+  "5170445": {
+    "itemId": 5170445,
+    "name": "Spirit Transformation Liqueur (Holy Flame)"
+  },
+  "5170446": {
+    "itemId": 5170446,
+    "name": "Spirit Transformation Liqueur (Prism Light)"
+  },
+  "5170447": {
+    "itemId": 5170447,
+    "name": "Spirit Transformation Liqueur (Pure Holy Flame)"
+  },
+  "5170448": {
+    "itemId": 5170448,
+    "name": "Spirit Transformation Liqueur (Pure Prism Light)"
+  },
+  "5170449": {
+    "itemId": 5170449,
+    "name": "Spirit Transformation Liqueur (Blessed Holy Flame)"
+  },
+  "5170450": {
+    "itemId": 5170450,
+    "name": "Spirit Transformation Liqueur (Blessed Prism Light)"
   },
   "5170451": {
     "itemId": 5170451,
@@ -101063,6 +103395,14 @@
     "itemId": 5170454,
     "name": "Bri Leith Remnant Stone"
   },
+  "5170455": {
+    "itemId": 5170455,
+    "name": "Spirit Transformation Liqueur (Explosive Vanguard)"
+  },
+  "5170456": {
+    "itemId": 5170456,
+    "name": "Blacksmith Manual"
+  },
   "5170459": {
     "itemId": 5170459,
     "name": "Free Spirit Reset Coupon"
@@ -101070,6 +103410,10 @@
   "5170460": {
     "itemId": 5170460,
     "name": "Free Spirit Reset Coupon (Event)"
+  },
+  "5170462": {
+    "itemId": 5170462,
+    "name": "50% Equipment Inheritance Fee Discount Coupon (Event)"
   },
   "5170474": {
     "itemId": 5170474,
@@ -105167,6 +107511,22 @@
     "itemId": 5250283,
     "name": "Pattern"
   },
+  "5250284": {
+    "itemId": 5250284,
+    "name": "Retrophiend"
+  },
+  "5250285": {
+    "itemId": 5250285,
+    "name": "Blue Pixel"
+  },
+  "5250286": {
+    "itemId": 5250286,
+    "name": "Pixel Dust"
+  },
+  "5250287": {
+    "itemId": 5250287,
+    "name": "Resolator"
+  },
   "5250288": {
     "itemId": 5250288,
     "name": "Glenn Bearna Additional Entry Pass (Tradable)"
@@ -105575,6 +107935,10 @@
     "itemId": 5300164,
     "name": "Jurassic Mark"
   },
+  "5300165": {
+    "itemId": 5300165,
+    "name": "Atomic Pixel"
+  },
   "5300166": {
     "itemId": 5300166,
     "name": "Summergold"
@@ -105703,6 +108067,10 @@
     "itemId": 5300260,
     "name": "Nightshade Lace Coin"
   },
+  "5300264": {
+    "itemId": 5300264,
+    "name": "Life Association Coin"
+  },
   "5300265": {
     "itemId": 5300265,
     "name": "Exquisite Perseus Core"
@@ -105746,6 +108114,10 @@
   "5300295": {
     "itemId": 5300295,
     "name": "Flying High Special Event Coin"
+  },
+  "5300296": {
+    "itemId": 5300296,
+    "name": "Abyssal Gazing-Stone"
   },
   "53003": {
     "itemId": 53003,
@@ -106371,6 +108743,18 @@
     "itemId": 5310055,
     "name": "Obtained during the Balanced Upon an Autumn Night Storyline"
   },
+  "5310056": {
+    "itemId": 5310056,
+    "name": "Pixel Event Season 2 Hidden Coin (Story Quest Check)"
+  },
+  "5310057": {
+    "itemId": 5310057,
+    "name": "Pixel Event Season 2 Hidden Coin (Daily Quest Check)"
+  },
+  "5310059": {
+    "itemId": 5310059,
+    "name": "Erinn's Pixelopia Event Notification"
+  },
   "5310060": {
     "itemId": 5310060,
     "name": "2024 Summer Master Plan Hidden Coin"
@@ -106494,6 +108878,10 @@
   "5310108": {
     "itemId": 5310108,
     "name": "Life In Erinn Research Event Hidden Coin"
+  },
+  "5310116": {
+    "itemId": 5310116,
+    "name": "Specialization Life Point Progress Count Hidden Coin"
   },
   "5310136": {
     "itemId": 5310136,
@@ -108165,7 +110553,7 @@
   },
   "5400078": {
     "itemId": 5400078,
-    "name": "Gayageum Recital"
+    "name": "Paulownia Gayageum Chair"
   },
   "5400079": {
     "itemId": 5400079,
@@ -108807,6 +111195,10 @@
     "itemId": 5400271,
     "name": "Shining Camping Chair"
   },
+  "5400272": {
+    "itemId": 5400272,
+    "name": "Time with Matthias"
+  },
   "5400273": {
     "itemId": 5400273,
     "name": "Lounging at the Lockers (for 4)"
@@ -108834,6 +111226,10 @@
   "5400287": {
     "itemId": 5400287,
     "name": "Hungry Hamchi's Snack Chair"
+  },
+  "5400290": {
+    "itemId": 5400290,
+    "name": "Sweet Summer Watermelon Punch Chair"
   },
   "54003": {
     "itemId": 54003,
@@ -116627,6 +119023,14 @@
     "itemId": 5560968,
     "name": "White-Crested Lost Soul Eyes (Two-Tone) Beauty Coupon"
   },
+  "5560979": {
+    "itemId": 5560979,
+    "name": "Matthias's Eyes Beauty Coupon"
+  },
+  "5560980": {
+    "itemId": 5560980,
+    "name": "Matthias's Mouth Beauty Coupon"
+  },
   "5600": {
     "itemId": 5600,
     "name": "Divine Demigod Hair"
@@ -118370,6 +120774,42 @@
   "57571": {
     "itemId": 57571,
     "name": "(임시)화산 늑대의 발톱"
+  },
+  "5790000": {
+    "itemId": 5790000,
+    "name": "No Script Coupon Test 01"
+  },
+  "5790001": {
+    "itemId": 5790001,
+    "name": "No Script Coupon Test 02"
+  },
+  "5790002": {
+    "itemId": 5790002,
+    "name": "No Script Coupon Test 03"
+  },
+  "5790003": {
+    "itemId": 5790003,
+    "name": "No Script Coupon Test 04"
+  },
+  "5790010": {
+    "itemId": 5790010,
+    "name": "Radiant Valkyrie's Chosen 2nd Title Coupon"
+  },
+  "5790011": {
+    "itemId": 5790011,
+    "name": "Azure Valkyrie's Chosen 2nd Title Coupon"
+  },
+  "5790012": {
+    "itemId": 5790012,
+    "name": "Dark Valkyrie's Chosen 2nd Title Coupon"
+  },
+  "5790013": {
+    "itemId": 5790013,
+    "name": "Crimson Valkyrie's Chosen 2nd Title Coupon"
+  },
+  "5790014": {
+    "itemId": 5790014,
+    "name": "Pure Valkyrie's Chosen 2nd Title Coupon"
   },
   "58000": {
     "itemId": 58000,
@@ -130158,6 +132598,10 @@
   "72016": {
     "itemId": 72016,
     "name": "Merchant Rating"
+  },
+  "72100": {
+    "itemId": 72100,
+    "name": "Season Life EXP"
   },
   "72101": {
     "itemId": 72101,
@@ -143641,11 +146085,11 @@
   },
   "80351": {
     "itemId": 80351,
-    "name": "Mystic Celtic Outfit (M)"
+    "name": "Mystic Celtic Armor (M)"
   },
   "80352": {
     "itemId": 80352,
-    "name": "Mystic Celtic Outfit (F)"
+    "name": "Mystic Celtic Armor (F)"
   },
   "80353": {
     "itemId": 80353,

@@ -111,7 +111,7 @@
   },
   "10026": {
     "skillId": 10026,
-    "name": "Taming Wild Animals",
+    "name": "Tame Wild Animal",
     "iconUrl": "gui_icon_skill_001_1_0.png"
   },
   "10027": {
@@ -1131,7 +1131,7 @@
   },
   "30006": {
     "skillId": 30006,
-    "name": "_LT[xml.skillinfo.7370]",
+    "name": "Healing",
     "iconUrl": "gui_icon_skill_000_2_2.png"
   },
   "30007": {
@@ -1286,7 +1286,7 @@
   },
   "30305": {
     "skillId": 30305,
-    "name": "Water Spray",
+    "name": "Water Crops",
     "iconUrl": "gui_icon_skill_001_5_6.png"
   },
   "30306": {
@@ -1608,6 +1608,16 @@
     "skillId": 35129,
     "name": "Spirit Scythe Awakening",
     "iconUrl": "gui_icon_skill_005_3_12.png"
+  },
+  "35130": {
+    "skillId": 35130,
+    "name": "Spirit Healing Wand Awakening",
+    "iconUrl": "gui_icon_skill_006_3_2.png"
+  },
+  "35131": {
+    "skillId": 35131,
+    "name": "Spirit Weapon Effect: Bleeding",
+    "iconUrl": "gui_icon_skill_006_4_3.png"
   },
   "40001": {
     "skillId": 40001,
@@ -2259,6 +2269,16 @@
     "name": "Gorias Imaging",
     "iconUrl": "gui_icon_skill_006_3_0.png"
   },
+  "50083": {
+    "skillId": 50083,
+    "name": "Equipment Tuning",
+    "iconUrl": "GUI_icon_skill_006_7_0.png"
+  },
+  "50084": {
+    "skillId": 50084,
+    "name": "Food Preservative",
+    "iconUrl": "GUI_icon_skill_002_7_13.png"
+  },
   "50085": {
     "skillId": 50085,
     "name": "Marionette\\nCrafting",
@@ -2401,12 +2421,12 @@
   },
   "50127": {
     "skillId": 50127,
-    "name": "Fertilizing",
+    "name": "Spread Fertilizer",
     "iconUrl": "gui_icon_skill_001_4_8.png"
   },
   "50128": {
     "skillId": 50128,
-    "name": "Bug Catching",
+    "name": "Catch Bugs",
     "iconUrl": "gui_icon_skill_001_5_8.png"
   },
   "50129": {
@@ -3144,6 +3164,11 @@
     "name": "Smack 'em!",
     "iconUrl": "GUI_icon_skill_005_4_14.png"
   },
+  "50277": {
+    "skillId": 50277,
+    "name": "Rarefied Holy Water of Lymilark",
+    "iconUrl": "gui_icon_skill_000_2_5.png"
+  },
   "50279": {
     "skillId": 50279,
     "name": "Almighty Stomp",
@@ -3568,6 +3593,51 @@
     "skillId": 51103,
     "name": "Place \\nGuild Banner",
     "iconUrl": "gui_icon_skill_005_6_6.png"
+  },
+  "51104": {
+    "skillId": 51104,
+    "name": "Water Crops",
+    "iconUrl": "GUI_icon_skill_006_1_1.png"
+  },
+  "51105": {
+    "skillId": 51105,
+    "name": "Spread Fertilizer",
+    "iconUrl": "GUI_icon_skill_006_2_1.png"
+  },
+  "51106": {
+    "skillId": 51106,
+    "name": "Catch Bugs",
+    "iconUrl": "GUI_icon_skill_006_3_1.png"
+  },
+  "51107": {
+    "skillId": 51107,
+    "name": "Wipe Clean",
+    "iconUrl": "GUI_icon_skill_006_4_0.png"
+  },
+  "51108": {
+    "skillId": 51108,
+    "name": "Adjust Heat",
+    "iconUrl": "GUI_icon_skill_006_5_0.png"
+  },
+  "51109": {
+    "skillId": 51109,
+    "name": "Play Music",
+    "iconUrl": "GUI_icon_skill_006_6_0.png"
+  },
+  "51110": {
+    "skillId": 51110,
+    "name": "Harvest",
+    "iconUrl": "GUI_icon_skill_006_0_1.png"
+  },
+  "51111": {
+    "skillId": 51111,
+    "name": "Cheer Performance",
+    "iconUrl": "gui_icon_skill_005_4_13.png"
+  },
+  "51112": {
+    "skillId": 51112,
+    "name": "Cultivate",
+    "iconUrl": "GUI_icon_skill_006_0_1.png"
   },
   "52000": {
     "skillId": 52000,
@@ -4849,6 +4919,41 @@
     "name": "Eternal Judgment",
     "iconUrl": "gui_icon_skill_000_0_0.png"
   },
+  "52418": {
+    "skillId": 52418,
+    "name": "Wave of Force",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52419": {
+    "skillId": 52419,
+    "name": "Erg Tornado",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52420": {
+    "skillId": 52420,
+    "name": "Erg Web",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52421": {
+    "skillId": 52421,
+    "name": "Erg Phantom Burst",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52422": {
+    "skillId": 52422,
+    "name": "Erg Diffusion",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52423": {
+    "skillId": 52423,
+    "name": "Erg Swell",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
+  "52424": {
+    "skillId": 52424,
+    "name": "Erg Warp",
+    "iconUrl": "gui_icon_skill_000_0_0.png"
+  },
   "52500": {
     "skillId": 52500,
     "name": "Freeze! Stop Right There!",
@@ -5167,12 +5272,12 @@
   "58008": {
     "skillId": 58008,
     "name": "Elemental Attunement",
-    "iconUrl": "gui_icon_skill_004_7_4.png"
+    "iconUrl": "gui_icon_skill_006_0_3.png"
   },
   "58009": {
     "skillId": 58009,
     "name": "Redoubled Offensive",
-    "iconUrl": "gui_icon_skill_004_7_4.png"
+    "iconUrl": "gui_icon_skill_006_7_2.png"
   },
   "58010": {
     "skillId": 58010,
@@ -5222,12 +5327,12 @@
   "58100": {
     "skillId": 58100,
     "name": "Blast",
-    "iconUrl": "gui_icon_skill_005_1_0.png"
+    "iconUrl": "gui_icon_skill_006_2_3.png"
   },
   "58101": {
     "skillId": 58101,
     "name": "Flare",
-    "iconUrl": "gui_icon_skill_005_1_0.png"
+    "iconUrl": "gui_icon_skill_006_1_3.png"
   },
   "58102": {
     "skillId": 58102,
@@ -5242,7 +5347,7 @@
   "58104": {
     "skillId": 58104,
     "name": "Veil",
-    "iconUrl": "gui_icon_skill_005_1_0.png"
+    "iconUrl": "gui_icon_skill_006_3_3.png"
   },
   "58200": {
     "skillId": 58200,
@@ -5261,7 +5366,7 @@
   },
   "59000": {
     "skillId": 59000,
-    "name": "_LT[xml.skillinfo.7376]",
+    "name": "Hand of Restoration",
     "iconUrl": "gui_icon_skill_005_7_3.png"
   },
   "59001": {
@@ -5303,6 +5408,11 @@
     "skillId": 59008,
     "name": "Polyphonic Melody",
     "iconUrl": "gui_icon_skill_005_1_10.png"
+  },
+  "59009": {
+    "skillId": 59009,
+    "name": "Resonant Litany",
+    "iconUrl": "gui_icon_skill_006_4_2.png"
   },
   "59020": {
     "skillId": 59020,
@@ -5384,6 +5494,11 @@
     "name": "Seething Mana",
     "iconUrl": "gui_icon_skill_005_7_8.png"
   },
+  "59047": {
+    "skillId": 59047,
+    "name": "Twilight Surge",
+    "iconUrl": "GUI_icon_skill_006_6_2.png"
+  },
   "59060": {
     "skillId": 59060,
     "name": "Ignis Plume",
@@ -5448,6 +5563,16 @@
     "skillId": 59086,
     "name": "Martyr's Consecration",
     "iconUrl": "gui_icon_skill_AR_SG_6_0.png"
+  },
+  "59087": {
+    "skillId": 59087,
+    "name": "Zealous Conviction",
+    "iconUrl": "gui_icon_skill_AR_SG_0_1.png"
+  },
+  "59088": {
+    "skillId": 59088,
+    "name": "Virtuous Oath",
+    "iconUrl": "gui_icon_skill_AR_SG_7_0.png"
   },
   "59100": {
     "skillId": 59100,

@@ -2363,6 +2363,10 @@
     "raceId": 110014,
     "name": "Crag Cow"
   },
+  "110015": {
+    "raceId": 110015,
+    "name": "Brium Cow"
+  },
   "11002": {
     "raceId": 11002,
     "name": "Red Skeleton"
@@ -13091,6 +13095,10 @@
     "raceId": 193379,
     "name": "Wisp"
   },
+  "19338": {
+    "raceId": 19338,
+    "name": "Ret"
+  },
   "193380": {
     "raceId": 193380,
     "name": "Black Grizzly Bear"
@@ -13130,6 +13138,10 @@
   "193389": {
     "raceId": 193389,
     "name": "Girl"
+  },
+  "19339": {
+    "raceId": 19339,
+    "name": "Tro"
   },
   "193390": {
     "raceId": 193390,
@@ -14326,6 +14338,82 @@
   "193733": {
     "raceId": 193733,
     "name": "Servant"
+  },
+  "193800": {
+    "raceId": 193800,
+    "name": "Ronaun"
+  },
+  "193801": {
+    "raceId": 193801,
+    "name": "Abyssal Cari"
+  },
+  "193802": {
+    "raceId": 193802,
+    "name": "Un Llygadog"
+  },
+  "193803": {
+    "raceId": 193803,
+    "name": "Gwallgof"
+  },
+  "193804": {
+    "raceId": 193804,
+    "name": "Slime Wyneb"
+  },
+  "193805": {
+    "raceId": 193805,
+    "name": "Merch Diafol"
+  },
+  "193806": {
+    "raceId": 193806,
+    "name": "Disciple"
+  },
+  "193807": {
+    "raceId": 193807,
+    "name": "Disciple"
+  },
+  "193808": {
+    "raceId": 193808,
+    "name": "Disciple"
+  },
+  "193809": {
+    "raceId": 193809,
+    "name": "Giga Glas Ghaibhleann"
+  },
+  "193810": {
+    "raceId": 193810,
+    "name": "Folamh"
+  },
+  "193811": {
+    "raceId": 193811,
+    "name": "Folamh's Apparition"
+  },
+  "193812": {
+    "raceId": 193812,
+    "name": "Folamh's Apparition"
+  },
+  "193813": {
+    "raceId": 193813,
+    "name": "Folamh's Apparition"
+  },
+  "193814": {
+    "raceId": 193814,
+    "name": "Abyssal Barrier"
+  },
+  "193815": {
+    "raceId": 193815,
+    "name": "Dark Erg Regulator"
+  },
+  "193816": {
+    "raceId": 193816,
+    "name": "Disciple"
+  },
+  "193817": {
+    "raceId": 193817,
+    "name": "Erg Slime"
+  },
+  "193818": {
+    "raceId": 193818,
+    "name": "Folamh"
   },
   "194": {
     "raceId": 194,
@@ -25635,6 +25723,10 @@
     "raceId": 40024,
     "name": "Sheep"
   },
+  "40025": {
+    "raceId": 40025,
+    "name": "Glint Sheep"
+  },
   "4003": {
     "raceId": 4003,
     "name": "Balor of the Evil Eye"
@@ -27915,6 +28007,10 @@
     "raceId": 4489,
     "name": "Talvish"
   },
+  "449": {
+    "raceId": 449,
+    "name": "Farm Crop Thief"
+  },
   "4490": {
     "raceId": 4490,
     "name": "Tech Duinn Geata"
@@ -29338,6 +29434,10 @@
   "4860": {
     "raceId": 4860,
     "name": "Wooden Man as Sturdy as Cailleach"
+  },
+  "4861": {
+    "raceId": 4861,
+    "name": "Wooden Man as Sturdy as Midir the Beloved"
   },
   "49": {
     "raceId": 49,
@@ -30974,6 +31074,10 @@
   "500007": {
     "raceId": 500007,
     "name": "Star Sheep"
+  },
+  "500008": {
+    "raceId": 500008,
+    "name": "Blocky Bubby"
   },
   "500009": {
     "raceId": 500009,
@@ -33010,6 +33114,10 @@
   "60005": {
     "raceId": 60005,
     "name": "Hen"
+  },
+  "60006": {
+    "raceId": 60006,
+    "name": "Fiora Hen"
   },
   "60101": {
     "raceId": 60101,
@@ -40150,6 +40258,10 @@
   "990420": {
     "raceId": 990420,
     "name": "Papillon Waltz Pierrot Marionette"
+  },
+  "990421": {
+    "raceId": 990421,
+    "name": "Matthias"
   },
   "990422": {
     "raceId": 990422,

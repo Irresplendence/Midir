@@ -15,6 +15,8 @@ cmd/dilmeterapi/assets/
 cmd/dilmeterapi/index.html
 tools/generator/out/
 tools/data/
+tools/data_versions/
+tools/data_backups/
 **/Thumbs.db
 *.db
 *.db-shm
