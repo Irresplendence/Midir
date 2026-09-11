@@ -17,13 +17,34 @@ func main() {
 	genRaces := flag.Bool("races", false, "Generate races data")
 	genItems := flag.Bool("items", false, "Generate items data")
 	genConditions := flag.Bool("conditions", false, "Generate conditions data")
+	dataDirFlag := flag.String("data", "", "Path to input data directory (defaults to newest in ../data_versions or ../data)")
 	flag.Parse()
 
 	// If no flags are set, generate everything
 	runAll := !*genSkills && !*genRaces && !*genItems && !*genConditions
 
-	// Paths
-	dataDir := filepath.Join("..", "data")
+	// Resolve data directory
+	dataDir := *dataDirFlag
+	if dataDir == "" {
+		versionsDir := filepath.Join("..", "data_versions")
+		if entries, err := ioutil.ReadDir(versionsDir); err == nil && len(entries) > 0 {
+			var latest os.FileInfo
+			for _, e := range entries {
+				if e.IsDir() {
+					if latest == nil || e.ModTime().After(latest.ModTime()) {
+						latest = e
+					}
+				}
+			}
+			if latest != nil {
+				dataDir = filepath.Join(versionsDir, latest.Name())
+			}
+		}
+		if dataDir == "" {
+			dataDir = filepath.Join("..", "data")
+		}
+	}
+
 	localDir := filepath.Join(dataDir, "local", "xml")
 	dbDir := filepath.Join(dataDir, "db")
 	outputDir := filepath.Join("out", "static_data")

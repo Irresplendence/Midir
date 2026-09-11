@@ -1474,6 +1474,11 @@
     "name": "Battle Cry",
     "iconUrl": "gui_condition_change03_5_3.png"
   },
+  "1156": {
+    "conditionId": 1156,
+    "name": "Commerce Expansion Cover",
+    "iconUrl": "gui_condition_change_7_4.png"
+  },
   "1159": {
     "conditionId": 1159,
     "name": "Berserker's Fury",
@@ -1486,7 +1491,7 @@
   },
   "1160": {
     "conditionId": 1160,
-    "name": "축복의 공예품: 코르플레의 나팔",
+    "name": "Blessed Craftwork: Cairbre's Bugle",
     "iconUrl": "gui_condition_change03_9_6.png"
   },
   "1161": {
@@ -1529,6 +1534,11 @@
     "name": "Movement Speed Increase",
     "iconUrl": "gui_condition_change03_2_4.png"
   },
+  "1169": {
+    "conditionId": 1169,
+    "name": "Maintain Build Upon Rebirth",
+    "iconUrl": "gui_condition_change04_5_2.png"
+  },
   "117": {
     "conditionId": 117,
     "name": "Height Change",
@@ -1536,7 +1546,7 @@
   },
   "1174": {
     "conditionId": 1174,
-    "name": "퓨리어스 앱솔루트",
+    "name": "Absolute Fury",
     "iconUrl": "gui_condition_change04_4_2.png"
   },
   "1175": {
@@ -1544,10 +1554,55 @@
     "name": "Freshman Buff",
     "iconUrl": "gui_condition_change04_6_2.png"
   },
+  "1176": {
+    "conditionId": 1176,
+    "name": "Dissonance",
+    "iconUrl": "gui_condition_change04_10_2.png"
+  },
+  "1177": {
+    "conditionId": 1177,
+    "name": "Pulse of Purification",
+    "iconUrl": "gui_condition_change04_9_2.png"
+  },
+  "1178": {
+    "conditionId": 1178,
+    "name": "Ebbing of Life",
+    "iconUrl": "gui_condition_change04_15_2.png"
+  },
+  "1179": {
+    "conditionId": 1179,
+    "name": "Virtuous Oath",
+    "iconUrl": "gui_condition_change04_8_2.png"
+  },
   "118": {
     "conditionId": 118,
     "name": "Attacked by a Crow.",
     "iconUrl": "gui_condition_change_1_3.png"
+  },
+  "1180": {
+    "conditionId": 1180,
+    "name": "Dark Erg Enhancement",
+    "iconUrl": "gui_condition_change04_4_3.png"
+  },
+  "1181": {
+    "conditionId": 1181,
+    "name": "Monster Erg Enhancement",
+    "iconUrl": "gui_condition_change04_5_3.png"
+  },
+  "1182": {
+    "conditionId": 1182,
+    "name": "Damage Boost",
+    "iconUrl": "gui_condition_change04_5_3.png"
+  },
+  "1183": {
+    "conditionId": 1183,
+    "name": "Erg Shield",
+    "iconUrl": "gui_condition_change04_6_3.png"
+  },
+  "1184": {
+    "conditionId": 1184,
+    "name": "Lingering Reflection",
+    "iconUrl": "gui_condition_change03_11_7.png"
   },
   "1185": {
     "conditionId": 1185,
@@ -1593,6 +1648,11 @@
     "conditionId": 1194,
     "name": "Restricted Use: Sending Mail",
     "iconUrl": "gui_condition_change_0_0.png"
+  },
+  "1197": {
+    "conditionId": 1197,
+    "name": "Erg Contamination",
+    "iconUrl": "gui_condition_change04_5_3.png"
   },
   "12": {
     "conditionId": 12,
@@ -2123,6 +2183,36 @@
     "conditionId": 210,
     "name": "Flame of Resurrection",
     "iconUrl": "gui_condition_change_0_5.png"
+  },
+  "2100": {
+    "conditionId": 2100,
+    "name": "Seasonal Dish - Bonus Damage Boost",
+    "iconUrl": "gui_condition_change04_9_1.png"
+  },
+  "2101": {
+    "conditionId": 2101,
+    "name": "Seasonal Dish - Decreased Durability Loss",
+    "iconUrl": "gui_condition_change04_10_1.png"
+  },
+  "2102": {
+    "conditionId": 2102,
+    "name": "Seasonal Dish - Movement Speed Boost",
+    "iconUrl": "gui_condition_change04_11_1.png"
+  },
+  "2103": {
+    "conditionId": 2103,
+    "name": "Seasonal Dish - Combat EXP Boost",
+    "iconUrl": "gui_condition_change04_12_1.png"
+  },
+  "2104": {
+    "conditionId": 2104,
+    "name": "Seasonal Dish - Rare Material Gathering Success Rate Boost",
+    "iconUrl": "gui_condition_change04_13_1.png"
+  },
+  "2105": {
+    "conditionId": 2105,
+    "name": "Seasonal Dish - Rare Product Crafting Success Rate Boost",
+    "iconUrl": "gui_condition_change04_14_1.png"
   },
   "211": {
     "conditionId": 211,
